@@ -1,9 +1,15 @@
 import Hero from "../components/Hero";
+import BgHeroHome from "../assets/bg-hero-home.png";
 
 export default function Home() {
   return (
     <div className="font-sans w-full">
-      <Hero />
+      <Hero
+        title="SOCIETY OF RENEWABLE ENERGY"
+        subtitle="Universitas Lampung"
+        image={BgHeroHome}
+        tagline="#GreenWithUs"
+      />
 
       {/* About Section */}
       {/* <section className="px-6 py-20 bg-white text-gray-900">
