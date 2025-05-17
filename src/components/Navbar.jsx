@@ -4,9 +4,9 @@ import Switch from "./SwitchESF";
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent flex justify-between items-center px-10 py-8">
+    <nav className="bg-transparent flex justify-between items-center py-8 mb-[20vh]">
       <img src={Logo} alt="SRE Logo" className="h-10" />
-      <ul className="flex  text-white font-medium">
+      <ul className="flex text-white font-medium">
         {[
           "/",
           "/about",
@@ -19,15 +19,14 @@ const Navbar = () => {
             <NavLink
               to={path}
               className={({ isActive }) =>
-                `px-8 py-2 rounded-4xl transition duration-300 ${
-                  isActive ? "bg-[#0F926C] text-white" : "text-white"
+                `px-8 py-2 rounded-4xl transition duration-300 ${isActive ? "bg-[#0F926C] text-white" : "text-white"
                 }`
               }
             >
               {path === "/"
                 ? "Home"
                 : path.replace("/", "").charAt(0).toUpperCase() +
-                  path.replace("/", "").slice(1)}
+                path.replace("/", "").slice(1)}
             </NavLink>
           </li>
         ))}
