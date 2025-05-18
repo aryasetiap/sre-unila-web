@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
-import Logo from "../assets/sre-logo.png";
+// import Logo from "/assets/sre-logo.png";
 import Switch from "./SwitchESF";
 
 const Navbar = () => {
   return (
     <nav className="bg-transparent flex justify-between items-center py-8 mb-[20vh]">
-      <img src={Logo} alt="SRE Logo" className="h-10" />
+      <img src='/assets/sre-logo.png' alt="SRE Logo" className="h-10" />
       <ul className="flex text-white font-medium">
         {[
           "/",
