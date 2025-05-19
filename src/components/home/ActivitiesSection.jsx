@@ -1,5 +1,6 @@
 import React from 'react';
 import ActivityCard from '../ActivityCard';
+import { motion } from 'framer-motion';
 
 const activities = [
     {
@@ -24,28 +25,46 @@ const activities = [
 
 const ActivitiesSection = () => {
     return (
-        <section className="bg-[#F9F6EE] py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20 text-center">
+        <motion.section
+            className="bg-[#F9F6EE] py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20 text-center"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            viewport={{ once: true }}
+        >
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-emerald-700 mb-8">
                     WHAT WE DO AT SRE UNILA
                 </h2>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <motion.div
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10"
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    viewport={{ once: true }}
+                >
                     {activities.map((activity, index) => (
                         <ActivityCard key={index} {...activity} />
                     ))}
-                </div>
+                </motion.div>
 
-                <div className="mt-10">
+                <motion.div
+                    className="mt-10"
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    viewport={{ once: true }}
+                >
                     <a
                         href="/activities"
                         className="bg-emerald-500 text-white text-lg sm:text-xl md:text-2xl font-semibold px-6 py-3 rounded-full hover:bg-emerald-600 transition"
                     >
                         SEE MORE
                     </a>
-                </div>
+                </motion.div>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
