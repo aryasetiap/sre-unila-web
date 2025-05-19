@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -20,21 +21,42 @@ const articles = [
 
 const ArticlesSection = () => {
     return (
-        <section className="bg-gradient-to-t from-[#2ac393] to-[#0e916b] text-white py-12 sm:py-16 rounded-4xl">
+        <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1 }}
+            className="bg-gradient-to-t from-[#2ac393] to-[#0e916b] text-white py-12 sm:py-16 rounded-4xl"
+        >
             <div className="max-w-6xl mx-auto px-4 sm:px-6">
-                <h2 className="text-4xl sm:text-6xl font-extrabold text-left mb-6">
+                <motion.h2
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-4xl sm:text-6xl font-extrabold text-left mb-6"
+                >
                     LATEST ARTICLE
-                </h2>
-                <p className="text-left mb-6 sm:mb-8 text-xl sm:text-3xl w-full sm:w-2/4">
+                </motion.h2>
+                <motion.p
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 1, delay: 0.3 }}
+                    className="text-left mb-6 sm:mb-8 text-xl sm:text-3xl w-full sm:w-2/4"
+                >
                     New ideas drop every week. Discover our WEDPAPER series on
                     <span className="font-bold">@sre.unila</span>.
-                </p>
+                </motion.p>
 
                 {/* Grid hanya untuk layar besar */}
                 <div className="hidden sm:block">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {articles.map((article) => (
-                            <div key={article.id} className="px-4 bg-[#F9F6EE] rounded-3xl">
+                            <motion.div
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: article.id * 0.1 }}
+                                key={article.id}
+                                className="px-4 bg-[#F9F6EE] rounded-3xl"
+                            >
                                 <div className="flex items-center justify-start rounded-lg pt-4 pb-2 gap-4">
                                     <img src="/assets/wedpaper/logo.png" alt="logo-sre" />
                                     <p className="font-semibold text-black">sre.unila</p>
@@ -50,24 +72,26 @@ const ArticlesSection = () => {
                                         <img src="/assets/wedpaper/comment.png" alt="" />
                                         <img src="/assets/wedpaper/plane.png" alt="" />
                                     </div>
-                                    <p className="text-black"><span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]</p>
+                                    <p className="text-black">
+                                        <span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]
+                                    </p>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>
 
                 {/* Carousel hanya untuk layar kecil */}
                 <div className="block sm:hidden">
-                    <Swiper
-                        modules={[Pagination]}
-                        spaceBetween={16}
-                        slidesPerView={1.2}
-                        pagination={{ clickable: true }}
-                    >
+                    <Swiper modules={[Pagination]} spaceBetween={16} slidesPerView={1.2} pagination={{ clickable: true }}>
                         {articles.map((article) => (
                             <SwiperSlide key={article.id}>
-                                <div className="px-4 bg-[#F9F6EE] rounded-3xl">
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: article.id * 0.1 }}
+                                    className="px-4 bg-[#F9F6EE] rounded-3xl"
+                                >
                                     <div className="flex items-center justify-start rounded-lg pt-4 pb-2 gap-4">
                                         <img src="/assets/wedpaper/logo.png" alt="logo-sre" />
                                         <p className="font-semibold text-black">sre.unila</p>
@@ -83,9 +107,11 @@ const ArticlesSection = () => {
                                             <img src="/assets/wedpaper/comment.png" alt="" />
                                             <img src="/assets/wedpaper/plane.png" alt="" />
                                         </div>
-                                        <p className="text-black"><span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]</p>
+                                        <p className="text-black">
+                                            <span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]
+                                        </p>
                                     </div>
-                                </div>
+                                </motion.div>
                             </SwiperSlide>
                         ))}
                     </Swiper>
@@ -93,15 +119,17 @@ const ArticlesSection = () => {
             </div>
 
             <div className="mt-12 sm:mt-16 text-center">
-                <a
+                <motion.a
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                     href="https://www.instagram.com/sre.unila"
                     target="_blank"
                     className="font-bold bg-white text-black px-8 sm:px-12 py-2 sm:py-3 rounded-full hover:bg-gray-200 transition"
                 >
                     SEE MORE
-                </a>
+                </motion.a>
             </div>
-        </section>
+        </motion.section>
     );
 };
 
