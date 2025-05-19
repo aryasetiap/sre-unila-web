@@ -5,7 +5,12 @@ import Hero from "../components/HeroSection";
 const Merchandise = () => {
   return (
     <div className="font-sans w-full">
-      <Hero />
+      <Hero
+        title="OUR MERCHANDISE"
+        subtitle="COMING SOON!"
+        image='/assets/bg-hero-merchandise.png'
+        tagline="#ReGreentheFuture"
+      />
       <Footer />
     </div>
   );
