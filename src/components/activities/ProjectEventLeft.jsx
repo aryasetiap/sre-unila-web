@@ -11,16 +11,16 @@ const ProjectEventLeft = ({
     textColor = "#0E946D",
 }) => {
     return (
-        <section className={`mt-32 px-6`} style={{ backgroundColor }}>
+        <section className="mt-24 sm:mt-32 px-4 sm:px-6" style={{ backgroundColor }}>
             <div
-                className={`max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
+                className={`max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
                     }`}
             >
                 {/* Gambar dan Judul */}
                 <div className="relative">
                     {/* Teks di atas gambar */}
                     <h2
-                        className="absolute -top-16 left-5 z-10 text-4xl md:text-6xl font-extrabold leading-none "
+                        className="absolute -top-10 sm:-top-16 left-4 sm:left-5 z-10 text-4xl sm:text-6xl font-extrabold leading-none"
                         style={{ color: textColor }}
                     >
                         <span className="block">{title}</span>
@@ -31,12 +31,12 @@ const ProjectEventLeft = ({
                     <img
                         src={imageSrc}
                         alt={imageAlt}
-                        className="rounded-lg shadow-lg"
+                        className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg"
                     />
                 </div>
 
                 {/* Teks Deskripsi */}
-                <div className="text-gray-800 text-justify font-semibold md:text-base leading-relaxed">
+                <div className="text-gray-800 text-justify font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
                     {textContent}
                 </div>
             </div>
