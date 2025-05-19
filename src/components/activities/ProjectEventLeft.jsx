@@ -11,32 +11,32 @@ const ProjectEventLeft = ({
     textColor = "#0E946D",
 }) => {
     return (
-        <section className="mt-24 sm:mt-32 px-4 sm:px-6" style={{ backgroundColor }}>
+        <section className="mt-16 sm:mt-24 px-4 sm:px-8 lg:px-12 xl:px-16" style={{ backgroundColor }}>
             <div
-                className={`max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 sm:gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
+                className={`max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center ${textLeft ? "" : "lg:flex-row-reverse"
                     }`}
             >
                 {/* Gambar dan Judul */}
                 <div className="relative">
                     {/* Teks di atas gambar */}
                     <h2
-                        className="absolute -top-10 sm:-top-16 left-4 sm:left-5 z-10 text-4xl sm:text-6xl font-extrabold leading-none"
+                        className="absolute -top-4 sm:-top-6 md:-top-8 lg:-top-10 left-3 sm:left-4 md:left-5 z-10 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight"
                         style={{ color: textColor }}
                     >
                         <span className="block">{title}</span>
-                        <span className="block">{subtitle}</span>
+                        <span className="block text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">{subtitle}</span>
                     </h2>
 
                     {/* Gambar */}
                     <img
                         src={imageSrc}
                         alt={imageAlt}
-                        className="rounded-lg shadow-lg w-full max-w-sm sm:max-w-md md:max-w-lg"
+                        className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
                     />
                 </div>
 
                 {/* Teks Deskripsi */}
-                <div className="text-gray-800 text-justify font-semibold text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                <div className="text-gray-800 text-justify  lg:text-xl xl:text-2xl leading-relaxed text-lg sm:text-xl md:text-2xl">
                     {textContent}
                 </div>
             </div>
