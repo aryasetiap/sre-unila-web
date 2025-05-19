@@ -68,7 +68,7 @@ export default function Footer() {
                     </a>
 
                     <a
-                        href="https://www.linkedin.com/company/sre-university-of-lampung"
+                        href="https://www.linkedin.com/company/society-of-renewable-energy-unila/"
                         className="flex items-center gap-3 hover:underline"
                         target="_blank"
                         rel="noopener noreferrer"

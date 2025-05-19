@@ -25,7 +25,7 @@ const activities = [
 
 const ActivitiesSection = () => {
     return (
-        <section className="bg-emerald-50 py-16 px-4 text-center">
+        <section className="bg-[#F9F6EE] py-16 px-4 text-center">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-extrabold text-emerald-700 mb-8 tracking-wide relative inline-block">
                     WHAT WE DO AT SRE UNILA

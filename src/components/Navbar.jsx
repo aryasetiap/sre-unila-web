@@ -4,7 +4,7 @@ import Switch from "./SwitchESF";
 
 const Navbar = () => {
   return (
-    <nav className="bg-transparent flex justify-between items-center py-8 mb-[20vh]">
+    <nav className="bg-transparent flex justify-between items-center py-8 ">
       <img src='/assets/sre-logo.png' alt="SRE Logo" className="h-10" />
       <ul className="flex text-white font-medium">
         {[

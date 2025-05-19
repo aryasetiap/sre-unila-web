@@ -1,5 +1,4 @@
 import Hero from "../components/HeroSection";
-import BgHeroHome from "../assets/bg-hero-home.png";
 import AboutSection from "../components/AboutSection";
 import IndonesianMapSection from "../components/IndonesianMapSection";
 import ActivitiesSection from "../components/ActivitiesSection";
@@ -11,7 +10,7 @@ export default function Home() {
       <Hero
         title="SOCIETY OF RENEWABLE ENERGY"
         subtitle="Universitas Lampung"
-        image={BgHeroHome}
+        image='/assets/bg-hero-home.png'
         tagline="#GreenWithUs"
       />
       <AboutSection />
