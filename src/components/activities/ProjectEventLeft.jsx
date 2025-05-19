@@ -11,16 +11,16 @@ const ProjectEventLeft = ({
     textColor = "#0E946D",
 }) => {
     return (
-        <section className={`py-24 px-6`} style={{ backgroundColor }}>
+        <section className={`mt-32 px-6`} style={{ backgroundColor }}>
             <div
-                className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
+                className={`max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
                     }`}
             >
                 {/* Gambar dan Judul */}
                 <div className="relative">
                     {/* Teks di atas gambar */}
                     <h2
-                        className="absolute -top-16 left-5 z-10 text-6xl md:text-6xl font-extrabold leading-none text-outline-2"
+                        className="absolute -top-16 left-5 z-10 text-4xl md:text-6xl font-extrabold leading-none "
                         style={{ color: textColor }}
                     >
                         <span className="block">{title}</span>

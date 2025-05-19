@@ -4,9 +4,9 @@ import ProjectEventRight from "./ProjectEventRight";
 
 const ProjectsEventsSection = () => {
     return (
-        <section className="bg-[#F9F6EE] text-gray-800 pt-16">
-            <div className="mx-20 px-6 bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg py-4 ">
-                <h1 className="text-6xl font-extrabold text-white drop-shadow-lg">
+        <section className="bg-[#F9F6EE] text-gray-800 pt-16 py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20">
+            <div className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-4 sm:px-6 py-4 md:py-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg text-center">
                     SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
                 </h1>
             </div>
@@ -78,11 +78,11 @@ const ProjectsEventsSection = () => {
                 textContent={
                     <>
                         <p className="mb-4 text-2xl">
-                            <span className="text-[40px]">10K MANGROVE SEEDLINGS </span> <br />
-                            Specifically in the Lampung region, the implementation of this activity coincides with the 60th anniversary of Lampung Province. Therefore, this event was attended by various elements of the government and the academic community in Lampung.
+                            10K MANGROVE SEEDLINGS Specifically in the Lampung region, the implementation of this activity coincides with the 60th anniversary of Lampung Province. Therefore, this event was attended by various elements of the government and the academic community in Lampung.
                         </p>
                         <p className="text-2xl">
-                            SRE Unila collaborated with BPDAS KLHK in organizing this event. The planting of these mangrove seedlings is expected to help address the issues around the coastal area of Pulau Pasaran, Bandar Lampung.                        </p>
+                            SRE Unila collaborated with BPDAS KLHK in organizing this event. The planting of these mangrove seedlings is expected to help address the issues around the coastal area of Pulau Pasaran, Bandar Lampung.
+                        </p>
                     </>
                 }
             />
@@ -109,8 +109,7 @@ const ProjectsEventsSection = () => {
                 textContent={
                     <>
                         <p className="mb-4 text-2xl">
-                            <span className="text-[40px]">SRE GOES TO INTERNATIONAL</span> <br />
-                            IISF held an event that made sustainability a crucial aspect of the entire sector. The event was held at the Jakarta Convention Center. This activity was attended by officials and stakeholders internationally - MNC’s
+                            SRE GOES TO INTERNATIONAL IISF held an event that made sustainability a crucial aspect of the entire sector. The event was held at the Jakarta Convention Center. This activity was attended by officials and stakeholders internationally - MNC’s
                         </p>
                     </>
                 }
@@ -174,21 +173,14 @@ const ProjectsEventsSection = () => {
                 }
             />
 
-            <section className="bg-[#F9F6EE] py-20 flex justify-center items-center">
-                <div className="relative w-full max-w-5xl px-4">
-                    <div
-                        className="bg-gradient-to-r from-[#0FB484] to-[#0F926C] text-white px-6 py-16 text-center"
-                        style={{
-                            clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)',
-                        }}
-                    >
-                        <p className="text-3xl font-bold mb-2">
-                            We Are Just Getting Started
-                        </p>
-                        <h2 className="text-black text-outline-1-white text-5xl font-extrabold leading-tight">
-                            MORE EXCITING ACTIVITIES <br className="hidden md:block" /> ARE ON THE WAY
-                        </h2>
-                    </div>
+            <section className="bg-[#F9F6EE] py-24 flex justify-center items-center">
+                <div className="text-center px-6">
+                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-[#0F926C]">
+                        We Are Just Getting Started
+                    </p>
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                        MORE EXCITING ACTIVITIES <br className="hidden md:block" /> ARE ON THE WAY
+                    </h2>
                 </div>
             </section>
         </section>

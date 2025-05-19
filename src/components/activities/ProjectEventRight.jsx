@@ -5,15 +5,15 @@ const ProjectEventRight = ({
     subtitle = "SUBTITLE",
     imageSrc,
     imageAlt,
-    textLeft = true,
+    textLeft = false,
     textContent,
     backgroundColor = "#0E946D",
     textColor = "#F9F6EE",
 }) => {
     return (
-        <section className={`py-24 px-6`} style={{ backgroundColor }}>
+        <section className={`py-12 my-12 px-6 rounded-2xl`} style={{ backgroundColor }}>
             <div
-                className={`max-w-6xl mx-auto grid md:grid-cols-2 gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
+                className={`max-w-6xl mx-auto grid lg:grid-cols-2 gap-8 items-center ${textLeft ? "" : "md:flex-row-reverse"
                     }`}
             >
                 {/* Teks Deskripsi */}
@@ -22,10 +22,10 @@ const ProjectEventRight = ({
                 </div>
 
                 {/* Gambar dan Judul */}
-                <div className="relative">
+                <div className="relative mt-12">
                     {/* Teks di atas gambar */}
                     <h2
-                        className="text-right absolute -top-16 right-5 z-10 text-6xl md:text-6xl font-extrabold leading-none text-outline-3"
+                        className="text-right absolute -top-16 right-5 z-10 text-4xl md:text-6xl font-extrabold leading-none"
                         style={{ color: textColor }}
                     >
                         <span className="block">{title}</span>
