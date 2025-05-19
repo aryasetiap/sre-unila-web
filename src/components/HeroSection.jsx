@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const Hero = ({ title, subtitle, image, tagline }) => {
   return (
     <div
-      className="w-full h-screen max-h-[800px] px-[5vw] min-h-[400px] bg-cover bg-center flex flex-col justify-start text-white"
+      className="relative w-full h-screen max-h-[800px] px-[5vw] min-h-[400px] bg-cover bg-center flex flex-col justify-start text-white"
       style={{ backgroundImage: `url(${image})` }}
     >
       <Navbar />

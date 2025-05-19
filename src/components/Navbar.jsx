@@ -1,37 +1,107 @@
 import { NavLink } from "react-router-dom";
-// import Logo from "/assets/sre-logo.png";
 import Switch from "./SwitchESF";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const navLinks = [
+    { path: "/", label: "Home" },
+    { path: "/about", label: "About" },
+    { path: "/activities", label: "Activities" },
+    { path: "/staff", label: "Staff" },
+    { path: "/articles", label: "Articles" },
+    { path: "/merchandise", label: "Merchandise" },
+  ];
+
   return (
-    <nav className="bg-transparent flex justify-between items-center py-8 ">
-      <img src='/assets/sre-logo.png' alt="SRE Logo" className="h-10" />
-      <ul className="flex text-white font-medium">
-        {[
-          "/",
-          "/about",
-          "/activities",
-          "/staff",
-          "/articles",
-          "/merchandise",
-        ].map((path) => (
-          <li key={path}>
-            <NavLink
-              to={path}
-              className={({ isActive }) =>
-                `px-8 py-2 rounded-4xl transition duration-300 ${isActive ? "bg-[#0F926C] text-white" : "text-white"
-                }`
-              }
+    <nav className="relative bg-transparent text-white py-6 px-4">
+      {/* Top Navbar */}
+      <div className="flex justify-between items-center">
+        <img src="/assets/sre-logo.png" alt="SRE Logo" className="h-10" />
+
+        {/* Desktop Nav */}
+        <ul className="hidden lg:flex text-white font-medium">
+          {navLinks.map(({ path, label }) => (
+            <li key={path}>
+              <NavLink
+                to={path}
+                className={({ isActive }) =>
+                  `px-8 py-2 rounded-4xl transition duration-300 ${isActive ? "bg-[#0F926C] text-white" : "text-white"
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            </li>
+          ))}
+        </ul>
+
+        {/* Desktop Switch */}
+        <div className="hidden lg:block">
+          <Switch />
+        </div>
+
+        {/* Hamburger Icon (Mobile Only) */}
+        <div className="lg:hidden">
+          <button onClick={() => setIsOpen(true)}>
+            <Menu size={24} />
+          </button>
+        </div>
+      </div>
+
+      {/* Mobile Side Drawer */}
+      <AnimatePresence>
+        {isOpen && (
+          <>
+            {/* Backdrop */}
+            <motion.div
+              className="fixed inset-0 bg-transparent backdrop-blur-md z-40"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              onClick={() => setIsOpen(false)}
+            />
+
+            {/* Sidebar */}
+            <motion.div
+              className="fixed top-0 right-0 w-72 h-full bg-[#0F926C] z-50 shadow-lg flex flex-col p-6 rounded-l-2xl"
+              initial={{ x: "100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "100%" }}
+              transition={{ type: "tween", duration: 0.3 }}
             >
-              {path === "/"
-                ? "Home"
-                : path.replace("/", "").charAt(0).toUpperCase() +
-                path.replace("/", "").slice(1)}
-            </NavLink>
-          </li>
-        ))}
-      </ul>
-      <Switch></Switch>
+              <div className="flex justify-between items-center mb-6">
+                <img src="/assets/sre-logo.png" alt="SRE Logo" className="h-8" />
+                <button onClick={() => setIsOpen(false)}>
+                  <X size={24} />
+                </button>
+              </div>
+
+              <div className="flex flex-col space-y-4 font-medium">
+                {navLinks.map(({ path, label }) => (
+                  <NavLink
+                    key={path}
+                    to={path}
+                    onClick={() => setIsOpen(false)}
+                    className={({ isActive }) =>
+                      `block px-4 py-2 rounded-2xl transition duration-300 ${isActive ? "bg-white text-[#0F926C]" : "text-white"
+                      }`
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                ))}
+                <div className="pt-4">
+                  <Switch />
+                </div>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
     </nav>
   );
 };

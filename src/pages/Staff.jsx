@@ -21,11 +21,8 @@ const Staff = () => {
             SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
           </h1>
         </div>
-
         <MainOfficersSection />
-
-        <HeadOfficersSection></HeadOfficersSection>
-
+        <HeadOfficersSection />
       </div>
       <Footer />
     </div>
