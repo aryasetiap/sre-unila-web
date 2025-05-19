@@ -1,10 +1,12 @@
 import Hero from "../components/HeroSection";
 import AboutSectionAbout from "../components/about/AboutSectionAbout";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 const About = () => {
   return (
     <div className="font-sans w-full">
+      <Navbar />
       <Hero
         title="ABOUT US"
         subtitle="Empowering youth to lead Indonesia’s clean energy future."

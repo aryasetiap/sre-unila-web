@@ -1,10 +1,11 @@
 import Footer from "../components/Footer";
 import Hero from "../components/HeroSection";
-
+import Navbar from "../components/Navbar";
 
 const Merchandise = () => {
   return (
     <div className="font-sans w-full">
+      <Navbar />
       <Hero
         title="OUR MERCHANDISE"
         subtitle="COMING SOON!"

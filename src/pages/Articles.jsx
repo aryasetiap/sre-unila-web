@@ -1,11 +1,12 @@
 import Hero from "../components/HeroSection";
 import ArticlesSection from "../components/articles/ArticlesSection";
 import Footer from "../components/Footer";
-
+import Navbar from "../components/Navbar";
 
 const Articles = () => {
   return (
     <div className="font-sans w-full">
+      <Navbar />
       <Hero
         title="OUR ARTICLES"
         subtitle="Ideas that move energy forward."

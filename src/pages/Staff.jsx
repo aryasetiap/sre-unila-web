@@ -2,11 +2,13 @@ import Hero from "../components/HeroSection";
 import MainOfficersSection from "../components/staff/MainOfficersSection";
 import HeadOfficersSection from "../components/staff/HeadOfficersSection";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 
 const Staff = () => {
   return (
     <div className="font-sans w-full">
+      <Navbar />
       <Hero
         title="OUR STAF"
         subtitle="Behind every project is a passionate student ready to make an impact."
