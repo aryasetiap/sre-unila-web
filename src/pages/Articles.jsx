@@ -15,8 +15,8 @@ const Articles = () => {
       />
       <section className="bg-[#F9F6EE] text-gray-800 py-16 px-6 md:px-20">
         {/* Header Gradient */}
-        <div className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-6 py-4 mb-16 inline-block">
-          <h1 className="text-6xl font-extrabold text-white drop-shadow-lg">
+        <div className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-4 sm:px-6 py-4 md:py-6 mb-16">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg text-center">
             SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
           </h1>
         </div>

@@ -1,4 +1,8 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
 
 const articles = [
     { id: 11, image: "/assets/wedpaper/wedpaper11.png" },
@@ -16,45 +20,83 @@ const articles = [
 
 const ArticlesSection = () => {
     return (
-        <section className="bg-gradient-to-t from-[#2ac393] to-[#0e916b] text-white py-16 rounded-[64px]">
-            <div className="max-w-6xl mx-auto px-6">
-                <h2 className="text-6xl font-extrabold text-left mb-6">
+        <section className="bg-gradient-to-t from-[#2ac393] to-[#0e916b] text-white py-12 sm:py-16 rounded-4xl">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6">
+                <h2 className="text-4xl sm:text-6xl font-extrabold text-left mb-6">
                     LATEST ARTICLE
                 </h2>
-                <p className="text-left mb-8 text-3xl w-2/4">
+                <p className="text-left mb-6 sm:mb-8 text-xl sm:text-3xl w-full sm:w-2/4">
                     New ideas drop every week. Discover our WEDPAPER series on
                     <span className="font-bold">@sre.unila</span>.
                 </p>
-                <div className=" grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {articles.map((article) => (
-                        <div key={article.id} className="px-4 bg-[#F9F6EE] rounded-3xl">
-                            <div className="flex items-center justify-start rounded-lg pt-4 pb-2 gap-4">
-                                <img src="/assets/wedpaper/logo.png" alt="logo-sre" />
-                                <p className="font-semibold text-black">sre.unila</p>
-                            </div>
-                            <img
-                                src={article.image}
-                                alt={article.title}
-                                className="w-full rounded-lg shadow-lg"
-                            />
-                            <div className="flex flex-col py-4 gap-2">
-                                <div className="flex gap-2 items-center justify-start">
-                                    <img src="/assets/wedpaper/heart.png" alt="" />
-                                    <img src="/assets/wedpaper/comment.png" alt="" />
-                                    <img src="/assets/wedpaper/plane.png" alt="" />
+
+                {/* Grid hanya untuk layar besar */}
+                <div className="hidden sm:block">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        {articles.map((article) => (
+                            <div key={article.id} className="px-4 bg-[#F9F6EE] rounded-3xl">
+                                <div className="flex items-center justify-start rounded-lg pt-4 pb-2 gap-4">
+                                    <img src="/assets/wedpaper/logo.png" alt="logo-sre" />
+                                    <p className="font-semibold text-black">sre.unila</p>
                                 </div>
-                                <p className="text-black"><span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]</p>
+                                <img
+                                    src={article.image}
+                                    alt={`WEDPAPER #${article.id}`}
+                                    className="w-full rounded-lg shadow-lg"
+                                />
+                                <div className="flex flex-col py-4 gap-2">
+                                    <div className="flex gap-2 items-center justify-start">
+                                        <img src="/assets/wedpaper/heart.png" alt="" />
+                                        <img src="/assets/wedpaper/comment.png" alt="" />
+                                        <img src="/assets/wedpaper/plane.png" alt="" />
+                                    </div>
+                                    <p className="text-black"><span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]</p>
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
+                </div>
+
+                {/* Carousel hanya untuk layar kecil */}
+                <div className="block sm:hidden">
+                    <Swiper
+                        modules={[Pagination]}
+                        spaceBetween={16}
+                        slidesPerView={1.2}
+                        pagination={{ clickable: true }}
+                    >
+                        {articles.map((article) => (
+                            <SwiperSlide key={article.id}>
+                                <div className="px-4 bg-[#F9F6EE] rounded-3xl">
+                                    <div className="flex items-center justify-start rounded-lg pt-4 pb-2 gap-4">
+                                        <img src="/assets/wedpaper/logo.png" alt="logo-sre" />
+                                        <p className="font-semibold text-black">sre.unila</p>
+                                    </div>
+                                    <img
+                                        src={article.image}
+                                        alt={`WEDPAPER #${article.id}`}
+                                        className="w-full rounded-lg shadow-lg"
+                                    />
+                                    <div className="flex flex-col py-4 gap-2">
+                                        <div className="flex gap-2 items-center justify-start">
+                                            <img src="/assets/wedpaper/heart.png" alt="" />
+                                            <img src="/assets/wedpaper/comment.png" alt="" />
+                                            <img src="/assets/wedpaper/plane.png" alt="" />
+                                        </div>
+                                        <p className="text-black"><span className="font-bold">sre.unila</span> [WEDPAPER #{article.id}]</p>
+                                    </div>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
                 </div>
             </div>
 
-            <div className="mt-16 text-center">
+            <div className="mt-12 sm:mt-16 text-center">
                 <a
                     href="https://www.instagram.com/sre.unila"
                     target="_blank"
-                    className="font-bold bg-white text-black px-12 py-3 rounded-full hover:bg-gray-200 transition"
+                    className="font-bold bg-white text-black px-8 sm:px-12 py-2 sm:py-3 rounded-full hover:bg-gray-200 transition"
                 >
                     SEE MORE
                 </a>
