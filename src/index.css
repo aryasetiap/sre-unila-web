@@ -1,4 +1,15 @@
 @import "tailwindcss";
+@layer base {
+  .text-outline-2 {
+    -webkit-text-stroke: 2px black;
+  }
+  .text-outline-3 {
+    -webkit-text-stroke: 3px black;
+  }
+  .text-outline-1-white {
+    -webkit-text-stroke: 1px white;
+  }
+}
 
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
