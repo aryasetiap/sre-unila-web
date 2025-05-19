@@ -1,15 +1,28 @@
 import React from "react";
 import ProjectEventLeft from "./ProjectEventLeft";
 import ProjectEventRight from "./ProjectEventRight";
+import { motion } from "framer-motion";
 
 const ProjectsEventsSection = () => {
     return (
         <section className="bg-[#F9F6EE] text-gray-800 pt-16 py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20">
-            <div className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-4 sm:px-6 py-4 md:py-6">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg text-center">
+            <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-4 sm:px-6 py-4 md:py-6"
+            >
+                <motion.h1
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+                    viewport={{ once: true }}
+                    className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg text-center"
+                >
                     SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
-                </h1>
-            </div>
+                </motion.h1>
+            </motion.div>
 
             <ProjectEventLeft
                 title="BIOMASS"
@@ -173,16 +186,41 @@ const ProjectsEventsSection = () => {
                 }
             />
 
-            <section className="bg-[#F9F6EE] py-24 flex justify-center items-center">
-                <div className="text-center px-6">
-                    <p className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-[#0F926C]">
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="bg-[#F9F6EE] py-24 flex justify-center items-center"
+            >
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    viewport={{ once: true }}
+                    className="text-center px-6"
+                >
+                    <motion.p
+                        initial={{ opacity: 0, y: -20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.4 }}
+                        viewport={{ once: true }}
+                        className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 text-[#0F926C]"
+                    >
                         We Are Just Getting Started
-                    </p>
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    </motion.p>
+
+                    <motion.h2
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8, delay: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-3xl sm:text-4xl md:text-5xl font-extrabold"
+                    >
                         MORE EXCITING ACTIVITIES <br className="hidden md:block" /> ARE ON THE WAY
-                    </h2>
-                </div>
-            </section>
+                    </motion.h2>
+                </motion.div>
+            </motion.section>
         </section>
     );
 };
