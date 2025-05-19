@@ -1,5 +1,5 @@
 import Hero from "../components/HeroSection";
-import ArticlesSection from "../components/ArticlesSection";
+import ArticlesSection from "../components/articles/ArticlesSection";
 import Footer from "../components/Footer";
 
 
@@ -9,7 +9,7 @@ const Articles = () => {
       <Hero
         title="OUR ARTICLES"
         subtitle="Ideas that move energy forward."
-        image='/assets/bg-hero-articles.png'
+        image='/assets/hero-images/bg-hero-articles.png'
         tagline="#ReGreentheFuture"
       />
       <section className="bg-[#F9F6EE] text-gray-800 py-16 px-6 md:px-20">

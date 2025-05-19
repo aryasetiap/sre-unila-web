@@ -1,7 +1,5 @@
 import { useState } from "react";
 import { cn } from "@/lib/utils"; // pastikan alias @ sudah dikonfigurasi
-import LogoESFInactive from "../assets/esf-logo.png";
-import LogoESFActive from "../assets/esf-logo-mono.png";
 
 export default function CustomToggleButton() {
   const [active, setActive] = useState(false);
@@ -22,7 +20,7 @@ export default function CustomToggleButton() {
         )}
       >
         <img
-          src={active ? LogoESFActive : LogoESFInactive}
+          src={active ? '/assets/esf-logo-mono.png' : '/assets/esf-logo.png'}
           alt="icon"
           className="w-4 h-4"
         />

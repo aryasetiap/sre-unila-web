@@ -1,5 +1,5 @@
 import Hero from "../components/HeroSection";
-import AboutSectionAbout from "../components/AboutSectionAbout";
+import AboutSectionAbout from "../components/about/AboutSectionAbout";
 import Footer from "../components/Footer";
 
 const About = () => {
@@ -8,7 +8,7 @@ const About = () => {
       <Hero
         title="ABOUT US"
         subtitle="Empowering youth to lead Indonesia’s clean energy future."
-        image='/assets/bg-hero-about.jpg'
+        image='/assets/hero-images/bg-hero-about.jpg'
         tagline="#ReGreentheFuture"
       />
       <AboutSectionAbout />

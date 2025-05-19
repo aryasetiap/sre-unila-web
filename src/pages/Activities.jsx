@@ -1,5 +1,5 @@
 import Hero from "../components/HeroSection";
-import ProjectsEventsSection from "../components/ProjectsEventsSection";
+import ProjectsEventsSection from "../components/activities/ProjectsEventsSection";
 import Footer from "../components/Footer";
 
 const Activities = () => {
@@ -8,7 +8,7 @@ const Activities = () => {
       <Hero
         title="OUR ACTIVITY"
         subtitle="We educate, we act, we innovate together for a clean energy future."
-        image='/assets/bg-hero-activities.png'
+        image='/assets/hero-images/bg-hero-activities.png'
         tagline="#ReGreentheFuture"
       />
 

@@ -1,5 +1,4 @@
 import React from 'react'
-import IndonesianMap from '../assets/indonesia-map-sre.png'
 
 const IndonesianMapSection = () => {
     return (
@@ -14,7 +13,7 @@ const IndonesianMapSection = () => {
             </div>
 
             <img
-                src={IndonesianMap}
+                src='/assets/indonesian-map-sre.png'
                 alt="Map of SRE Chapters in Indonesia"
                 className="w-full"
             />

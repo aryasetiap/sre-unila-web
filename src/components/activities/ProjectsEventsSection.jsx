@@ -14,7 +14,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventLeft
                 title="BIOMASS"
                 subtitle="PROJECT"
-                imageSrc="/assets/sre-biomass.png"
+                imageSrc="/assets/activities/sre-biomass.png"
                 imageAlt="Biomass Project"
                 textContent={
                     <>
@@ -35,7 +35,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventRight
                 title="SOLAR PV"
                 subtitle="INSTALLATION"
-                imageSrc="/assets/sre-pv.png"
+                imageSrc="/assets/activities/sre-pv.png"
                 imageAlt="Solar PV Project"
                 textContent={
                     <>
@@ -52,7 +52,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventLeft
                 title="Asia-Pacific Energy Youth Engagement"
                 subtitle=""
-                imageSrc="/assets/sre-asia-pacific.jpg"
+                imageSrc="/assets/activities/sre-asia-pacific.jpg"
                 imageAlt="Asia-Pacific Energy Youth Engagement"
                 textContent={
                     <>
@@ -73,7 +73,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventRight
                 title="MANGROVE PLANNING"
                 subtitle=""
-                imageSrc="/assets/sre-mangrove.png"
+                imageSrc="/assets/activities/sre-mangrove.png"
                 imageAlt="MANGROVE PLANNING"
                 textContent={
                     <>
@@ -90,7 +90,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventLeft
                 title="GID NATIONAL SEMINAR"
                 subtitle=""
-                imageSrc="/assets/sre-gid.png"
+                imageSrc="/assets/activities/sre-gid.png"
                 imageAlt="GID NATIONAL SEMINAR"
                 textContent={
                     <>
@@ -104,7 +104,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventRight
                 title="IISF 2024 AT"
                 subtitle="JAKARTA"
-                imageSrc="/assets/sre-iisf.jpg"
+                imageSrc="/assets/activities/sre-iisf.jpg"
                 imageAlt="IISF 2024 AT JAKARTA"
                 textContent={
                     <>
@@ -119,7 +119,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventLeft
                 title="SEKOLAH NUSANTARA"
                 subtitle=""
-                imageSrc="/assets/sre-sekolah-nusantara.png"
+                imageSrc="/assets/activities/sre-sekolah-nusantara.png"
                 imageAlt="SEKOLAH NUSANTARA"
                 textContent={
                     <>
@@ -133,7 +133,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventRight
                 title="SRE: RICH"
                 subtitle=""
-                imageSrc="/assets/sre-rich.png"
+                imageSrc="/assets/activities/sre-rich.png"
                 imageAlt="SRE: RICH"
                 textContent={
                     <>
@@ -147,7 +147,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventLeft
                 title="STADIUM GENERALE"
                 subtitle=""
-                imageSrc="/assets/sre-sg.png"
+                imageSrc="/assets/activities/sre-sg.png"
                 imageAlt="STADIUM GENERALE"
                 textContent={
                     <>
@@ -164,7 +164,7 @@ const ProjectsEventsSection = () => {
             <ProjectEventRight
                 title="SPARK 2024"
                 subtitle=""
-                imageSrc="/assets/sre-spark24.jpg"
+                imageSrc="/assets/activities/sre-spark24.jpg"
                 imageAlt="SPARK 2024"
                 textContent={
                     <>

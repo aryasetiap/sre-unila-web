@@ -8,7 +8,7 @@ const Merchandise = () => {
       <Hero
         title="OUR MERCHANDISE"
         subtitle="COMING SOON!"
-        image='/assets/bg-hero-merchandise.png'
+        image='/assets/hero-images/bg-hero-merchandise.png'
         tagline="#ReGreentheFuture"
       />
       <Footer />

@@ -1,6 +1,6 @@
 import Hero from "../components/HeroSection";
-import MainOfficersSection from "../components/MainOfficersSection";
-import HeadOfficersSection from "../components/HeadOfficersSection";
+import MainOfficersSection from "../components/staff/MainOfficersSection";
+import HeadOfficersSection from "../components/staff/HeadOfficersSection";
 import Footer from "../components/Footer";
 
 
@@ -10,7 +10,7 @@ const Staff = () => {
       <Hero
         title="OUR STAF"
         subtitle="Behind every project is a passionate student ready to make an impact."
-        image='/assets/bg-hero-staff.png'
+        image='/assets/hero-images/bg-hero-staff.png'
         tagline="#ReGreentheFuture"
       />
 

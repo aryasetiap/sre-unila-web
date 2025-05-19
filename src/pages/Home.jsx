@@ -1,7 +1,7 @@
 import Hero from "../components/HeroSection";
-import AboutSection from "../components/AboutSection";
-import IndonesianMapSection from "../components/IndonesianMapSection";
-import ActivitiesSection from "../components/ActivitiesSection";
+import AboutSection from "../components/home/AboutSection";
+import IndonesianMapSection from "../components/home/IndonesianMapSection";
+import ActivitiesSection from "../components/home/ActivitiesSection";
 import Footer from "../components/Footer";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
       <Hero
         title="SOCIETY OF RENEWABLE ENERGY"
         subtitle="Universitas Lampung"
-        image='/assets/bg-hero-home.png'
+        image='/assets/hero-images/bg-hero-home.png'
         tagline="#GreenWithUs"
       />
       <AboutSection />
