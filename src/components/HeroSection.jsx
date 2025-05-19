@@ -10,7 +10,7 @@ const Hero = ({ title, subtitle, image, tagline }) => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="text-left max-w-2xl mt-[32vh]"
+        className="text-left max-w-2xl mt-[36vh]"
       >
         <h1 className="md:text-[64px] text-4xl font-bold leading-[1.2]">{title}</h1>
         <p className="md:text-[40px] text-3xl italic  mb-4 font-thin leading-[1.2]">{subtitle}</p>
