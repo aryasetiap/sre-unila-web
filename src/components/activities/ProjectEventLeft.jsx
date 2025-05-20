@@ -39,7 +39,10 @@ const ProjectEventLeft = ({
                         transition={{ duration: 0.8, delay: 0.2 }}
                         viewport={{ once: true }}
                         className="absolute -top-4 sm:-top-6 md:-top-8 lg:-top-10 left-3 sm:left-4 md:left-5 z-10 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight"
-                        style={{ color: textColor }}
+                        style={{
+                            fontSize: "clamp(1.8rem, 4vw, 4.2rem)",
+                            color: textColor
+                        }}
                     >
                         <span className="block">{title}</span>
                         <span className="block text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">{subtitle}</span>
