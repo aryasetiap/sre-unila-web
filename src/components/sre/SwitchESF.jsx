@@ -1,22 +1,28 @@
 import { useState } from "react";
-import { cn } from "@/lib/utils"; // pastikan alias @ sudah dikonfigurasi
+import { useNavigate } from "react-router-dom";
+import { cn } from "@/lib/utils"; // Pastikan alias @ sudah dikonfigurasi
 
 export default function CustomToggleButton() {
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
+
+  const handleToggle = () => {
+    setActive(!active);
+    navigate(active ? "/" : "/esf");
+  };
 
   return (
     <button
-      onClick={() => setActive(!active)}
+      onClick={handleToggle}
       className={cn(
         "shadow-md relative w-20 h-8 rounded-full flex items-center px-1 transition-colors duration-300",
         active ? "bg-white" : "bg-emerald-600"
       )}
     >
-
       {/* Bulatan putih */}
       <div
         className={cn(
-          "w-6 h-6 rounded-full  transition-all duration-300",
+          "w-6 h-6 rounded-full transition-all duration-300",
           active ? "bg-gray-300 translate-x-0" : "bg-white translate-x-12"
         )}
       />
@@ -29,14 +35,14 @@ export default function CustomToggleButton() {
         )}
       >
         <img
-          src={active ? '/assets/esf-logo.png' : '/assets/esf-logo-mono.png'}
+          src={active ? "/assets/esf-logo.png" : "/assets/esf-logo-mono.png"}
           alt="icon"
           className="w-4 h-4"
         />
-        <span className={active ? "text-emerald-600 font-bold" : "text-white font-bold"}>ESF</span>
+        <span className={active ? "text-emerald-600 font-bold" : "text-white font-bold"}>
+          ESF
+        </span>
       </div>
-
-
-    </button >
+    </button>
   );
 }

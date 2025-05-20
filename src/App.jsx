@@ -6,6 +6,11 @@ import Activities from "./pages/Activities";
 import Staff from "./pages/Staff";
 import Articles from "./pages/Articles";
 import Merchandise from "./pages/Merchandise";
+import HomeEsf from "./pages/esf/HomeEsf";
+import AboutEsf from "./pages/esf/AboutEsf";
+import AgendaEsf from "./pages/esf/AgendaEsf";
+import SponsorEsf from "./pages/esf/SponsorEsf";
+import ContactUsEsf from "./pages/esf/ContactUsEsf";
 
 function App() {
   return (
@@ -16,6 +21,11 @@ function App() {
       <Route path="/staff" element={<Staff />} />
       <Route path="/articles" element={<Articles />} />
       <Route path="/merchandise" element={<Merchandise />} />
+      <Route path="/esf" element={<HomeEsf />} />
+      <Route path="/esf/about" element={<AboutEsf />} />
+      <Route path="/esf/agenda" element={<AgendaEsf />} />
+      <Route path="/esf/sponsor" element={<SponsorEsf />} />
+      <Route path="/esf/contact-us" element={<ContactUsEsf />} />
     </Routes>
   );
 }
