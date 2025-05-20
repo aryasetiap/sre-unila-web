@@ -26,7 +26,7 @@ const Hero = ({ title, subtitle, image, tagline }) => {
             transition: { duration: 0.8, staggerChildren: 0.3 },
           },
         }}
-        className="text-left max-w-2xl mt-[36vh] relative z-10"
+        className="text-center w-full mt-[36vh] relative z-10"
       >
         <motion.h1
           variants={{

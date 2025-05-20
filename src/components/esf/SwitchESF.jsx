@@ -16,7 +16,7 @@ export default function CustomToggleButton() {
       onClick={handleToggle}
       className={cn(
         "shadow-md relative w-20 h-8 rounded-full flex items-center px-1 transition-colors duration-300",
-        active ? "bg-white" : "bg-emerald-600"
+        active ? "bg-white" : "bg-[#4CB748]"
       )}
     >
       {/* Bulatan putih */}

@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
-import {
-    Mail,
-    Phone,
-    Instagram,
-    Facebook,
-    Linkedin
-} from "lucide-react";
+import { Mail, Phone, Instagram } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -13,21 +7,21 @@ export default function Footer() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="bg-gradient-to-r from-[#0FB484] to-[#0F926C] text-white py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20"
+            className="relative text-white py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20 bg-cover bg-center"
+            style={{ backgroundImage: "url('/assets/esf/bg-footer.png')" }}
         >
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="max-w-7xl mx-auto flex flex-col items-start gap-6 text-center">
 
-                {/* Kiri: Logo dan Nama */}
-                <motion.a
-                    href="/"
+                {/* Logo dan Nama */}
+                <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <img src="/assets/sre-logo-footer.png" alt="SRE Logo" className="h-16 sm:h-20 md:h-24" />
-                </motion.a>
+                    <img src="/assets/esf/esf-logo.png" alt="Environmental Sustainability Forum Logo" className="h-10 sm:h-12" />
+                </motion.div>
 
-                {/* Kanan: Kontak */}
+                {/* Kontak */}
                 <motion.div
                     initial="hidden"
                     animate="visible"
@@ -35,14 +29,13 @@ export default function Footer() {
                         hidden: { opacity: 0 },
                         visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
                     }}
-                    className="grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-6 text-lg sm:text-xl md:text-2xl"
+                    className="grid grid-cols-1 gap-y-4 text-lg"
                 >
                     {[
-                        { href: "mailto:sre.unila@gmail.com", icon: Mail, text: "sre.unila@gmail.com" },
-                        { href: "https://www.instagram.com/sre.unila", icon: Instagram, text: "@sre.unila" },
-                        { href: "https://wa.me/6285840148352", icon: Phone, text: "(+62) 858 4014 8352" },
-                        { href: "https://www.facebook.com/sreunila", icon: Facebook, text: "SRE Unila" },
-                        { href: "https://www.linkedin.com/company/society-of-renewable-energy-unila/", icon: Linkedin, text: "SRE University of Lampung" }
+                        { href: "mailto:esforum.sreunila@gmail.com", icon: Mail, text: "esforum.sreunila@gmail.com" },
+                        { href: "https://wa.me/085609631320", icon: Phone, text: "(+62) 856 0963 1320" },
+                        { href: "https://wa.me/0895612178944", icon: Phone, text: "(+62) 895 6121 78944" },
+                        { href: "https://www.instagram.com/esfindonesia", icon: Instagram, text: "@esfindonesia" }
                     ].map(({ href, icon: Icon, text }, index) => (
                         <motion.a
                             key={index}
@@ -56,9 +49,9 @@ export default function Footer() {
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                                className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 bg-white rounded-full flex items-center justify-center"
+                                className="w-9 h-9 bg-white rounded-full flex items-center justify-center"
                             >
-                                <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-black" />
+                                <Icon className="w-6 h-6 text-[#4CB748]" />
                             </motion.div>
                             <span>{text}</span>
                         </motion.a>
