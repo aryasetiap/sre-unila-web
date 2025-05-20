@@ -1,7 +1,7 @@
-import Hero from "../components/HeroSection";
-import ArticlesSection from "../components/articles/ArticlesSection";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Hero from "../components/sre/HeroSection";
+import ArticlesSection from "../components/sre/articles/ArticlesSection";
+import Footer from "../components/sre/Footer";
+import Navbar from "../components/sre/Navbar";
 import { motion } from "framer-motion";
 
 const Articles = () => {

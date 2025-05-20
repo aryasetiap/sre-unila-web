@@ -1,6 +1,6 @@
-import Footer from "../components/Footer";
-import Hero from "../components/HeroSection";
-import Navbar from "../components/Navbar";
+import Footer from "../components/sre/Footer";
+import Hero from "../components/sre/HeroSection";
+import Navbar from "../components/sre/Navbar";
 
 const Merchandise = () => {
   return (

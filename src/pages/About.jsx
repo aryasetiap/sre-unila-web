@@ -1,7 +1,7 @@
-import Hero from "../components/HeroSection";
-import AboutSectionAbout from "../components/about/AboutSectionAbout";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Hero from "../components/sre/HeroSection";
+import AboutSectionAbout from "../components/sre/about/AboutSectionAbout";
+import Footer from "../components/sre/Footer";
+import Navbar from "../components/sre/Navbar";
 import { motion } from "framer-motion";
 
 const About = () => {

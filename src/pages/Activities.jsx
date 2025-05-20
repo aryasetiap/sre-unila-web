@@ -1,7 +1,7 @@
-import Hero from "../components/HeroSection";
-import ProjectsEventsSection from "../components/activities/ProjectsEventsSection";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Hero from "../components/sre/HeroSection";
+import ProjectsEventsSection from "../components/sre/activities/ProjectsEventsSection";
+import Footer from "../components/sre/Footer";
+import Navbar from "../components/sre/Navbar";
 
 const Activities = () => {
   return (

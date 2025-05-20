@@ -1,8 +1,8 @@
-import Hero from "../components/HeroSection";
-import Navbar from "../components/Navbar";
-import MainOfficersSection from "../components/staff/MainOfficersSection";
-import HeadOfficersSection from "../components/staff/HeadOfficersSection";
-import Footer from "../components/Footer";
+import Hero from "../components/sre/HeroSection";
+import Navbar from "../components/sre/Navbar";
+import MainOfficersSection from "../components/sre/staff/MainOfficersSection";
+import HeadOfficersSection from "../components/sre/staff/HeadOfficersSection";
+import Footer from "../components/sre/Footer";
 import { motion } from "framer-motion";
 
 const Staff = () => {

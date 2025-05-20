@@ -1,9 +1,9 @@
-import Hero from "../components/HeroSection";
-import AboutSection from "../components/home/AboutSection";
-import IndonesianMapSection from "../components/home/IndonesianMapSection";
-import ActivitiesSection from "../components/home/ActivitiesSection";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+import Hero from "../components/sre/HeroSection";
+import AboutSection from "../components/sre/home/AboutSection";
+import IndonesianMapSection from "../components/sre/home/IndonesianMapSection";
+import ActivitiesSection from "../components/sre/home/ActivitiesSection";
+import Footer from "../components/sre/Footer";
+import Navbar from "../components/sre/Navbar";
 
 
 export default function Home() {
