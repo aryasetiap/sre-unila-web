@@ -15,12 +15,15 @@ import ContactUsEsf from "./pages/esf/ContactUsEsf";
 function App() {
   return (
     <Routes>
+      {/* SRE */}
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/activities" element={<Activities />} />
       <Route path="/staff" element={<Staff />} />
       <Route path="/articles" element={<Articles />} />
       <Route path="/merchandise" element={<Merchandise />} />
+
+      {/* ESF */}
       <Route path="/esf" element={<HomeEsf />} />
       <Route path="/esf/about" element={<AboutEsf />} />
       <Route path="/esf/agenda" element={<AgendaEsf />} />
