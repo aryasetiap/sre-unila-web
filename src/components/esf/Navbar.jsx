@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Switch from "../sre/SwitchESF";
+import Switch from "./SwitchESF";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -11,12 +11,11 @@ const Navbar = () => {
   const [hasScrolled, setHasScrolled] = useState(false);
 
   const navLinks = [
-    { path: "/", label: "Home" },
-    { path: "/about", label: "About" },
-    { path: "/activities", label: "Activities" },
-    { path: "/staff", label: "Staff" },
-    { path: "/articles", label: "Articles" },
-    { path: "/merchandise", label: "Merchandise" },
+    { path: "/esf", label: "Home" },
+    { path: "/esf/about", label: "About" },
+    { path: "/esf/agenda", label: "Agenda" },
+    { path: "/esf/sponsor", label: "Sponsor" },
+    { path: "/esf/contact-us", label: "Contact Us" },
   ];
 
   useEffect(() => {
@@ -43,7 +42,7 @@ const Navbar = () => {
             } ${hasScrolled ? "bg-[#0F926C] shadow-md rounded-b-3xl" : "bg-transparent"}`}
         >
           <div className="flex justify-between items-center">
-            <img src="/assets/sre-logo.png" alt="SRE Logo" className="h-10" />
+            <img src="/assets/esf/esf-logo.png" alt="SRE Logo" className="h-10" />
             <ul className="hidden lg:flex text-white font-medium">
               {navLinks.map(({ path, label }) => (
                 <li key={path}>
@@ -95,7 +94,7 @@ const Navbar = () => {
             >
               <div className="flex justify-between items-center mb-6">
                 <motion.img
-                  src="/assets/sre-logo.png"
+                  src="/assets/esf/esf-logo.png"
                   alt="SRE Logo"
                   className="h-8"
                   initial={{ opacity: 0, scale: 0.8 }}
