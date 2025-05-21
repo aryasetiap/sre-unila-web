@@ -1,6 +1,7 @@
 import SpeakerCard from "./SpeakerCard";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const speakers = [
     {
@@ -108,22 +109,42 @@ const SpeakersSection = () => {
                 SPEAKERS
             </h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                {visibleSpeakers.map((speaker, index) => (
-                    <SpeakerCard key={index} {...speaker} />
-                ))}
-            </div>
+            <motion.div
+                layout
+                className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto"
+            >
+                <AnimatePresence>
+                    {visibleSpeakers.map((speaker, index) => (
+                        <motion.div
+                            key={index}
+                            layout
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: -20 }}
+                            transition={{ duration: 0.3, ease: "easeInOut" }}
+                            style={{ flex: '1 1 280px', maxWidth: '320px' }} // set flex-basis dan max-width tiap card
+                        >
+                            <SpeakerCard {...speaker} />
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
+            </motion.div>
 
             <div className="mt-8 text-center">
-                <button
+                <motion.button
                     className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-800 transition"
                     onClick={() => setShowAll(!showAll)}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: "spring", stiffness: 300 }}
                 >
                     {showAll ? "SEE LESS" : "SEE MORE"}
-                </button>
+                </motion.button>
             </div>
         </section>
     );
 };
+
+
 
 export default SpeakersSection;

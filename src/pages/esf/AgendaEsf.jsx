@@ -32,7 +32,6 @@ const agendaDay2 = [
   ["13.10-16.30", "Sustainable Agricultural and Production Responsible: Policy, Funding, and Promotion.", "Menggala – Meeting Room"],
 ];
 
-
 const AgendaEsf = () => {
   return (
     <>
@@ -44,7 +43,7 @@ const AgendaEsf = () => {
         tagline="#ReGreentheFuture"
       />
 
-      <section className="bg-white py-12 px-4 md:px-12">
+      <section className="bg-white py-12 px-4 md:px-12 space-y-12">
         <ExpandableCardEsf
           dayTitle="DAY 1"
           date="June 17, 2025"
@@ -53,7 +52,6 @@ const AgendaEsf = () => {
           agendaList={agendaDay1}
         />
 
-        {/* Gunakan kembali untuk DAY 2, DAY 3, dst. dengan agenda berbeda */}
         <ExpandableCardEsf
           dayTitle="DAY 2"
           date="June 18, 2025"
@@ -62,13 +60,11 @@ const AgendaEsf = () => {
           agendaList={agendaDay2}
         />
 
-
-
         <ExpandableCardEsf
           dayTitle="DAY 3"
           date="June 19, 2025"
           summary="Reporting Session & Closing Ceremony"
-          location="Grand Krakatau Ballroom, Swiss-Belhotel Lampung"
+          location="Grand Krakatau Ballroom, Swiss-Belhotel Lampung"
           agendaList={[
             ["8.30-9.35", "Opening & Event Reporting"],
             ["9.35-11.35", "Presentation of Thematic Meeting Results (Per Meeting Room)"],
@@ -76,7 +72,6 @@ const AgendaEsf = () => {
             ["13.00-20.00", "Closing Ceremony"],
           ]}
         />
-
       </section>
 
       <SpeakersSection />
