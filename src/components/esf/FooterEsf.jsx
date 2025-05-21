@@ -7,18 +7,21 @@ export default function Footer() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="relative text-white py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20 bg-cover bg-center"
+            className="relative text-white py-12 sm:py-16 px-4 sm:px-6 md:px-12 bg-cover bg-center"
             style={{ backgroundImage: "url('/assets/esf/bg-footer.png')" }}
         >
-            <div className="max-w-7xl mx-auto flex flex-col items-start gap-6 text-center">
-
-                {/* Logo dan Nama */}
+            <div className="max-w-7xl mx-auto flex flex-col md:items-start items-center gap-8">
+                {/* Logo */}
                 <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.6 }}
                 >
-                    <img src="/assets/esf/esf-logo.png" alt="Environmental Sustainability Forum Logo" className="h-10 sm:h-12" />
+                    <img
+                        src="/assets/esf/esf-logo.png"
+                        alt="Environmental Sustainability Forum Logo"
+                        className="h-12 sm:h-14 md:h-16"
+                    />
                 </motion.div>
 
                 {/* Kontak */}
@@ -29,7 +32,7 @@ export default function Footer() {
                         hidden: { opacity: 0 },
                         visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
                     }}
-                    className="grid grid-cols-1 gap-y-4 text-lg"
+                    className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-lg w-full max-w-2xl"
                 >
                     {[
                         { href: "mailto:esforum.sreunila@gmail.com", icon: Mail, text: "esforum.sreunila@gmail.com" },
@@ -42,8 +45,8 @@ export default function Footer() {
                             href={href}
                             target="_blank"
                             rel="noopener noreferrer"
-                            whileHover={{ scale: 1.1 }}
-                            className="flex items-center gap-3 hover:underline"
+                            whileHover={{ scale: 1.05 }}
+                            className="flex items-center gap-4 hover:underline"
                         >
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
@@ -51,7 +54,7 @@ export default function Footer() {
                                 transition={{ duration: 0.6, delay: index * 0.2 }}
                                 className="w-9 h-9 bg-white rounded-full flex items-center justify-center"
                             >
-                                <Icon className="w-6 h-6 text-[#4CB748]" />
+                                <Icon className="w-5 h-5 text-[#4CB748]" />
                             </motion.div>
                             <span>{text}</span>
                         </motion.a>
