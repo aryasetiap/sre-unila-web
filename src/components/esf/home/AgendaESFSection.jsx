@@ -41,13 +41,13 @@ const AgendaSection = () => {
                             <h3 className="text-left text-2xl text-[#1D6935] px-6 font-bold mt-2 pt-2">
                                 Thematic Meeting
                             </h3>
-                            <p className="text-left text-base text-[#1D6935]  mt-4 px-6">
+                            <div className="text-left text-base text-[#1D6935]  mt-4 px-6">
                                 An exclusive session focused on specific SDG topics, particularly addressing opportunities and challenges in sustainable development within Lampung through cross-sector collaboration. Expected outcomes include:
                                 <ul className="list-disc list-inside">
                                     <li>A resolution and roadmap as concrete solutions for sustainable development in Lampung.</li>
                                     <li>Presentation of findings to Lampung policymakers to support policy formulation.</li>
                                 </ul>
-                            </p>
+                            </div>
                             <Link to="/esf/agenda">
                                 <button className="mt-4 bg-transparent border-[#1D6935] border-2 text-[#1D6935] py-2 px-4 rounded-2xl hover:bg-[#1D6935] hover:text-white transition duration-300">
                                     SEE MORE

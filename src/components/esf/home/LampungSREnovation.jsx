@@ -31,8 +31,8 @@ const CompetitionCard = ({ img, title, description1, description2, teamSize, dea
 
 const LampungSREnovation = () => {
     return (
-        <div className="py-12 px-4 bg-gray-100">
-            <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Lampung SREnovation</h1>
+        <div className="py-12 px-4 bg-[#FBFCF7]">
+            <h1 className="text-5xl font-extrabold text-center text-[#1D6935] mb-12">Lampung SREnovation</h1>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <CompetitionCard
                     img="/assets/esf/home/hsc.png"
