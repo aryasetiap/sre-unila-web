@@ -34,7 +34,7 @@ Website resmi **Society of Renewable Energy (SRE) Universitas Lampung**. Platfor
 
 1. **Clone repo ini:**
    ```sh
-   git clone https://github.com/username/sre-unila-web.git
+   git clone https://github.com/aryasetiap/sre-unila-web.git
    cd sre-unila-web
    ```
 2. **Install dependencies:**
