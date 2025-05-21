@@ -1,5 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 const Card = ({ image, name, title, index }) => (
     <motion.div
@@ -56,11 +58,29 @@ const SpeakersSection = () => {
                 <h2 className="text-[#1D6935] text-4xl font-bold text-center mb-8">
                     With Global Speakers
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                {/* Desktop & Tablet grid */}
+                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {speakers.map((speaker, index) => (
                         <Card key={index} index={index} {...speaker} />
                     ))}
                 </div>
+
+                {/* Mobile slider */}
+                <div className="md:hidden">
+                    <Swiper
+                        spaceBetween={16}
+                        slidesPerView={1.2}
+                        centeredSlides={true}
+                    >
+                        {speakers.map((speaker, index) => (
+                            <SwiperSlide key={index}>
+                                <Card index={index} {...speaker} />
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
                 <div className="text-center mt-8">
                     <motion.button
                         className="bg-green-500 text-white py-2 px-8 rounded-4xl"

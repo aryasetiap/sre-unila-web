@@ -6,19 +6,22 @@ import AgendaESF from "../../components/esf/home/AgendaESFSection"
 import LampungSREnovation from "../../components/esf/home/LampungSREnovation"
 import SpeakersSection from "../../components/esf/home/SpeakersSection"
 import { Mail, Phone, Instagram } from "lucide-react";
+import { motion } from "framer-motion";
 
 const HomeEsf = () => {
     return (
         <>
             <Navbar />
+
             <Hero
                 title="ENVIRONMENTAL SUSTAINABILITY FORUM"
                 subtitle="17 - 19 June 2025 | Swiss-Belhotel Lampung"
                 image='/assets/esf/home/bg-hero-homeesf.png'
                 tagline="#ReGreentheFuture"
             />
+
             <AboutESF />
-            <AgendaESF />
+
             <div className="bg-white text-center pt-12 pb-24">
                 <h1 className="text-[#1D6935] text-3xl font-bold mb-6">Ready to Make an Impact?</h1>
                 <p className="text-gray-700 text-lg mb-8">
@@ -37,11 +40,19 @@ const HomeEsf = () => {
                     </a>
                 </div>
             </div>
+
             <LampungSREnovation />
+
             <SpeakersSection />
 
-            <section className="bg-[#FBFCF7] py-18 flex flex-col items-left justify-center text-left px-6">
-                <h2 className="text-5xl font-bold text-[#1D6935] ">Sponsorship</h2>
+            <motion.section
+                className="bg-[#FBFCF7] py-18 flex flex-col items-left justify-center text-left px-6"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+            >
+                <h2 className="text-5xl font-bold text-[#1D6935]">Sponsorship</h2>
                 <p className="text-lg text-gray-600 my-12 max-w-2xl">
                     We invite you to take part in ESF 2025 as our sponsors. To learn more about how to get engaged
                     please kindly contact <a
@@ -57,15 +68,19 @@ const HomeEsf = () => {
                 >
                     CONTACT US
                 </a>
-            </section>
+            </motion.section>
 
-            <section className="bg-[#FBFCF7] py-18 flex flex-col items-left justify-center text-left px-6">
-                <div className="flex flex-row items-center justify-between gap-12">
+            <motion.section
+                className="bg-[#FBFCF7] py-18 flex flex-col items-left justify-center text-left px-6"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+                viewport={{ once: true }}
+            >
+                <div className="flex flex-col lg:flex-row items-start justify-between gap-12">
                     <div className="max-w-xl">
                         <h2 className="text-5xl font-bold text-[#1D6935] flex items-center">
-                            <span className="mr-4">
-                                <Mail size={40} color="#1D6935" />
-                            </span>
+                            <Mail size={40} color="#1D6935" className="mr-4" />
                             Join us!
                         </h2>
                         <p className="text-lg text-gray-600 my-12">
@@ -95,9 +110,7 @@ const HomeEsf = () => {
                         </p>
                     </div>
                 </div>
-            </section>
-
-
+            </motion.section>
             <Footer />
         </>
     );
