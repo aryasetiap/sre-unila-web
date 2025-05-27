@@ -15,7 +15,7 @@ export default function Home() {
         title="SOCIETY OF RENEWABLE ENERGY"
         subtitle="Universitas Lampung"
         image='/assets/hero-images/bg-hero-home.png'
-        tagline="#GreenWithUs"
+        tagline="#ReGreenTheFuture"
       />
       <AboutSection />
       <IndonesianMapSection />
