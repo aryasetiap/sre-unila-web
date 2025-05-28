@@ -4,13 +4,18 @@ import { motion } from "framer-motion";
 const officers = [
     {
         name: "IHSANUDDIN FADILLAH",
-        role: "President of SRE Lampung",
-        image: "/assets/staff/Ihsan.png",
+        role: "President",
+        image: "/assets/staff/Ihsan1.png",
     },
     {
         name: "WIDYA REGITASARI Y.",
-        role: "Vice President of SRE Lampung",
-        image: "/assets/staff/Widya.png",
+        role: "Vice President",
+        image: "/assets/staff/Widya1.png",
+    },
+    {
+        name: "LANVIA MADASI",
+        role: "Secretary",
+        image: "/assets/staff/Alan1.png",
     },
 ];
 
@@ -56,7 +61,7 @@ const MainOfficersSection = () => {
                     whileInView="visible"
                     transition={{ staggerChildren: 0.2 }}
                     viewport={{ once: true }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12 justify-items-center"
+                    className="grid grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-10 sm:gap-x-12 sm:gap-y-16 justify-items-center items-center"
                 >
                     {officers.map((officer, index) => (
                         <motion.div
@@ -65,22 +70,24 @@ const MainOfficersSection = () => {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: index * 0.2 }}
                             viewport={{ once: true }}
-                            className="flex flex-col items-center text-white"
-                        >
-                            <div className="w-40 sm:w-64 h-40 sm:h-64 rounded-full overflow-hidden border-2 border-black shadow-lg bg-[#98A49B]">
+                            className={`flex flex-col justify-start items-center text-white max-w-xs w-full h-full ${officers.length % 2 !== 0 && index === officers.length - 1
+                                ? "col-span-2 md:col-span-1"
+                                : ""
+                                }`}                        >
+                            <div className="w-32 h-32 sm:w-48 sm:h-48 rounded-full overflow-hidden border-2 border-black shadow-lg bg-[#F9F6EE]">
                                 <img
                                     src={officer.image}
                                     alt={officer.name}
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-                            <h3 className="mt-4 text-2xl sm:text-4xl font-extrabold text-center">{officer.name}</h3>
-                            <p className="text-lg sm:text-2xl opacity-90">{officer.role}</p>
+                            <h3 className="mt-4 text-base sm:text-xl font-bold text-center">{officer.name}</h3>
+                            <p className="text-sm sm:text-base opacity-90 text-center">{officer.role}</p>
                         </motion.div>
                     ))}
                 </motion.div>
             </motion.div>
-        </motion.section>
+        </motion.section >
     );
 };
 
