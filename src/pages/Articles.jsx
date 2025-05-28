@@ -14,7 +14,7 @@ const Articles = () => {
         image='/assets/hero-images/bg-hero-articles.png'
         tagline="#ReGreentheFuture"
       />
-      <section className="bg-[#F9F6EE] text-gray-800 py-16 px-6 md:px-20">
+      <section id="after-hero-section" className="bg-[#F9F6EE] text-gray-800 py-16 px-6 md:px-20">
         {/* Header Gradient */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}

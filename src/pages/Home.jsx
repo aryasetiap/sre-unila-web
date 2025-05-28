@@ -10,14 +10,15 @@ export default function Home() {
   return (
     <div className="font-sans w-full">
       <Navbar />
-
       <Hero
         title="SOCIETY OF RENEWABLE ENERGY"
         subtitle="Universitas Lampung"
         image='/assets/hero-images/bg-hero-home.png'
         tagline="#ReGreenTheFuture"
       />
-      <AboutSection />
+      <section id="after-hero-section">
+        <AboutSection />
+      </section>
       <IndonesianMapSection />
       <ActivitiesSection />
       <Footer />

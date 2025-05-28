@@ -13,8 +13,9 @@ const Activities = () => {
         image='/assets/hero-images/bg-hero-activities.png'
         tagline="#ReGreentheFuture"
       />
-
-      <ProjectsEventsSection />
+      <section id="after-hero-section">
+        <ProjectsEventsSection />
+      </section>
 
       <Footer />
     </div>

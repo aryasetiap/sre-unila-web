@@ -16,8 +16,7 @@ const Staff = () => {
         image='/assets/hero-images/bg-hero-staff.jpg'
         tagline="#ReGreentheFuture"
       />
-
-      <div className="bg-[#F9F6EE] text-gray-800 pt-16">
+      <div id="after-hero-section" className="bg-[#F9F6EE] text-gray-800 pt-16">
         {/* Header Gradient */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
