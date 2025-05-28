@@ -9,7 +9,7 @@ const Merchandise = () => {
       <Hero
         title="OUR MERCHANDISE"
         subtitle="COMING SOON!"
-        image='/assets/hero-images/bg-hero-merchandise.png'
+        image='/assets/hero-images/bg-hero-merchandise.jpg'
         tagline="#ReGreentheFuture"
       />
       <Footer />

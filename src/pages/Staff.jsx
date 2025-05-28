@@ -13,7 +13,7 @@ const Staff = () => {
       <Hero
         title="OUR STAF"
         subtitle="Behind every project is a passionate student ready to make an impact."
-        image='/assets/hero-images/bg-hero-staff.png'
+        image='/assets/hero-images/bg-hero-staff.jpg'
         tagline="#ReGreentheFuture"
       />
 

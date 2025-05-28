@@ -14,6 +14,8 @@ const Hero = ({ title, subtitle, image, tagline }) => {
         className="absolute inset-0"
         style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }}
       />
+      {/* Overlay gelap */}
+      <div className="absolute inset-0 bg-black/40 z-0" />
 
       <motion.div
         initial="hidden"
