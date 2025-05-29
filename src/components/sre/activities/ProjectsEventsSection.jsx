@@ -22,8 +22,8 @@ const ProjectsEventsSection = () => {
             </motion.div>
 
             <ProjectEventLeft
-                title="BIOMASS"
-                subtitle="PROJECT"
+                title="BIOMASS PROJECT"
+                subtitle=""
                 imageSrc="/assets/activities/sre-biomass.png"
                 imageAlt="Biomass Project"
                 textContent={
@@ -43,8 +43,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventRight
-                title="SOLAR PV"
-                subtitle="INSTALLATION"
+                title="SOLAR PV INSTALLATION"
+                subtitle=""
                 imageSrc="/assets/activities/sre-pv.png"
                 imageAlt="Solar PV Project"
                 textContent={
@@ -60,8 +60,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventLeft
-                title="ASIA-PACIFIC"
-                subtitle="ENERGY YOUTH ENGAGEMENT"
+                title="ASIA-PACIFIC ENERGY YOUTH ENGAGEMENT"
+                subtitle=""
                 imageSrc="/assets/activities/sre-asia-pacific.jpg"
                 imageAlt="Asia-Pacific Energy Youth Engagement"
                 textContent={
@@ -81,8 +81,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventRight
-                title="MANGROVE"
-                subtitle="PLANNING"
+                title="MANGROVE PLANNING"
+                subtitle=""
                 imageSrc="/assets/activities/sre-mangrove.png"
                 imageAlt="MANGROVE PLANNING"
                 textContent={
@@ -98,8 +98,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventLeft
-                title="GID"
-                subtitle="NATIONAL SEMINAR"
+                title="GID NATIONAL SEMINAR"
+                subtitle=""
                 imageSrc="/assets/activities/sre-gid.png"
                 imageAlt="GID NATIONAL SEMINAR"
                 textContent={
@@ -112,8 +112,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventRight
-                title="IISF 2024"
-                subtitle="AT JAKARTA"
+                title="IISF 2024 AT JAKARTA"
+                subtitle=""
                 imageSrc="/assets/activities/sre-iisf.jpg"
                 imageAlt="IISF 2024 AT JAKARTA"
                 textContent={
@@ -126,8 +126,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventLeft
-                title="SEKOLAH"
-                subtitle="NUSANTARA"
+                title="SEKOLAH NUSANTARA"
+                subtitle=""
                 imageSrc="/assets/activities/sre-sekolah-nusantara.png"
                 imageAlt="SEKOLAH NUSANTARA"
                 textContent={
@@ -140,8 +140,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventRight
-                title="SRE:"
-                subtitle="RICH"
+                title="SRE: RICH"
+                subtitle=""
                 imageSrc="/assets/activities/sre-rich.png"
                 imageAlt="SRE: RICH"
                 textContent={
@@ -154,8 +154,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventLeft
-                title="STADIUM"
-                subtitle="GENERALE"
+                title="STADIUM GENERALE"
+                subtitle=""
                 imageSrc="/assets/activities/sre-sg.png"
                 imageAlt="STADIUM GENERALE"
                 textContent={
@@ -171,8 +171,8 @@ const ProjectsEventsSection = () => {
             />
 
             <ProjectEventRight
-                title="SPARK"
-                subtitle="2024"
+                title="SPARK 2024"
+                subtitle=""
                 imageSrc="/assets/activities/sre-spark24.jpg"
                 imageAlt="SPARK 2024"
                 textContent={

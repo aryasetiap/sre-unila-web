@@ -4,6 +4,7 @@ import IndonesianMapSection from "../components/sre/home/IndonesianMapSection";
 import ActivitiesSection from "../components/sre/home/ActivitiesSection";
 import Footer from "../components/sre/Footer";
 import Navbar from "../components/sre/Navbar";
+import { tr } from "framer-motion/client";
 
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
     <div className="font-sans w-full">
       <Navbar />
       <Hero
+        hideButton={true}
         title="SOCIETY OF RENEWABLE ENERGY"
         subtitle="Universitas Lampung"
         image='/assets/hero-images/bg-hero-home.png'
