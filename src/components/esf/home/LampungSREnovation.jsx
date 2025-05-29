@@ -55,7 +55,7 @@ const LampungSREnovation = () => {
             >
                 Lampung SREnovation
             </motion.h1>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-20 max-w-4xl mx-auto">
                 <CompetitionCard
                     img="/assets/esf/home/hsc.png"
                     title="HIGH SCHOOL COMPETITION"

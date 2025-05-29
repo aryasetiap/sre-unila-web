@@ -63,7 +63,7 @@ const SpeakersSection = () => {
                 </h2>
 
                 {/* Desktop & Tablet flex grid */}
-                <div className="hidden md:flex flex-wrap gap-8 justify-center">
+                <div className="hidden md:flex flex-wrap gap-8 justify-center max-w-5xl mx-auto">
                     {speakers.map((speaker, index) => {
                         // Untuk baris terakhir, jika hanya ada 2 speaker, center-kan
                         const itemsPerRow = 3;
@@ -80,8 +80,7 @@ const SpeakersSection = () => {
                         return (
                             <div
                                 key={index}
-                                className={`flex-1 min-w-[260px] max-w-[340px] ${lastRowClass}`}
-                                style={{ flexBasis: "30%" }}
+                                className={`w-[300px] max-w-full ${lastRowClass}`}
                             >
                                 <Card index={index} {...speaker} />
                             </div>
