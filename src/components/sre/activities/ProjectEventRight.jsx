@@ -6,7 +6,6 @@ const ProjectEventRight = ({
     subtitle = "SUBTITLE",
     imageSrc,
     imageAlt,
-    textLeft = false,
     textContent,
     backgroundColor = "#0E946D",
     textColor = "#F9F6EE",
@@ -17,49 +16,35 @@ const ProjectEventRight = ({
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="py-8 sm:py-12 md:py-16 lg:py-20 my-8 sm:my-12 px-4 sm:px-8 md:px-12 lg:px-16 xl:px-20 rounded-2xl"
+            className="py-6 md:py-10 px-4 sm:px-8 lg:px-12 xl:px-16 rounded-2xl"
             style={{ backgroundColor }}
         >
-            <div
-                className={`max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center ${textLeft ? "" : "lg:flex-row-reverse"
-                    }`}
+            {/* Teks di atas gambar */}
+            <motion.h2
+                initial={{ opacity: 0, y: -20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="sm:-top-6 md:-top-8 lg:-top-10 left-3 sm:left-4 md:left-5 z-10 text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-tight mb-6 sm:mb-8 md:mb-10 lg:mb-12 text-right"
+                style={{
+                    textShadow: "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000",
+                    fontSize: "clamp(1.8rem, 4vw, 4.2rem)",
+                    color: textColor
+                }}
             >
-                {/* Teks Deskripsi */}
-                <motion.div
-                    initial={{ opacity: 0, x: -30 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                    className="text-white text-justify lg:text-xl xl:text-2xl leading-relaxed text-lg sm:text-xl md:text-2xl"
-                >
-                    {textContent}
-                </motion.div>
+                <span className="block">{title}</span>
+                <span className="block text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">{subtitle}</span>
+            </motion.h2>
 
-                {/* Gambar dan Judul */}
+            <div className="w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-start">
+                {/* Gambar di atas pada mobile, kanan pada desktop */}
                 <motion.div
                     initial={{ opacity: 0, x: 30 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
                     viewport={{ once: true }}
-                    className="relative mt-6 sm:mt-8 md:mt-10 lg:mt-12"
+                    className="relative  order-1 lg:order-2"
                 >
-                    {/* Teks di atas gambar */}
-                    <motion.h2
-                        initial={{ opacity: 0, y: -20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4 }}
-                        viewport={{ once: true }}
-                        className="text-right absolute -top-6 sm:-top-8 md:-top-10 lg:-top-12 right-3 sm:right-4 md:right-5 z-10 font-extrabold leading-none"
-                        style={{
-                            fontSize: "clamp(1.8rem, 4vw, 4.2rem)",
-                            color: textColor
-                        }}
-                    >
-                        <span className="block">{title}</span>
-                        <span className="block text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl">{subtitle}</span>
-                    </motion.h2>
-
-                    {/* Gambar */}
                     <motion.img
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -67,8 +52,19 @@ const ProjectEventRight = ({
                         viewport={{ once: true }}
                         src={imageSrc}
                         alt={imageAlt}
-                        className="rounded-lg shadow-lg w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl"
+                        className="rounded-lg shadow-lg w-full"
                     />
+                </motion.div>
+
+                {/* Teks di bawah pada mobile, kiri pada desktop */}
+                <motion.div
+                    initial={{ opacity: 0, x: -30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="text-white text-justify lg:text-xl xl:text-2xl leading-relaxed text-lg sm:text-xl md:text-2xl order-2 lg:order-1"
+                >
+                    {textContent}
                 </motion.div>
             </div>
         </motion.section>
