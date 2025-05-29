@@ -14,6 +14,13 @@ const Hero = ({ title, subtitle, image, tagline }) => {
         className="absolute inset-0"
         style={{ backgroundImage: `url(${image})`, backgroundSize: "cover", backgroundPosition: "center" }}
       />
+      {/* Overlay gradien dari bawah ke atas, transparan 50% */}
+      <div
+        className="absolute inset-0 z-0 pointer-events-none"
+        style={{
+          background: "linear-gradient(0deg, rgba(76,183,72,0.5) 0%, rgba(18,65,16,0.4) 100%)",
+        }}
+      />
 
       <motion.div
         initial="hidden"
