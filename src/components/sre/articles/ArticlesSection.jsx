@@ -17,6 +17,7 @@ const articles = [
     { id: 3, image: "/assets/wedpaper/wedpaper3.jpg", link: "https://www.instagram.com/p/DCmYbsbztpr/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
     { id: 2, image: "/assets/wedpaper/wedpaper2.jpg", link: "https://www.instagram.com/p/C_z52RkpEp2/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
     { id: 1, image: "/assets/wedpaper/wedpaper1.jpg", link: "https://www.instagram.com/p/C-7iADWTH48/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" },
+    { id: 0, image: "/assets/wedpaper/more.png", link: "https://www.instagram.com/sre.unila/" }
 ];
 
 
@@ -49,7 +50,7 @@ const ArticlesSection = () => {
 
                 {/* Grid hanya untuk layar besar */}
                 <div className="hidden sm:block">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                         {articles.map((article) => (
                             <a
                                 href={article.link}
@@ -90,7 +91,7 @@ const ArticlesSection = () => {
 
                 {/* Carousel hanya untuk layar kecil */}
                 <div className="block sm:hidden">
-                    <Swiper modules={[Pagination]} spaceBetween={16} slidesPerView={1.2} pagination={{ clickable: true }}>
+                    <Swiper modules={[Pagination]} spaceBetween={16} slidesPerView={1.2}>
                         {articles.map((article) => (
                             <SwiperSlide key={article.id}>
                                 <a
