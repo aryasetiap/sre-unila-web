@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Switch from "../sre/SwitchESF";
+import CustomToggleButton from "../shared/SwitchESF";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
@@ -59,7 +59,7 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="hidden lg:block">
-              <Switch />
+              <CustomToggleButton />
             </div>
             <div className="lg:hidden">
               <button onClick={() => setIsOpen(true)}>
@@ -157,7 +157,7 @@ const Navbar = () => {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="pt-4"
               >
-                <Switch />
+                <CustomToggleButton />
               </motion.div>
             </motion.div>
           </>
