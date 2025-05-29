@@ -32,16 +32,19 @@ const AboutSection = () => {
             ref={sectionRef}
             className="bg-[#F9F6EE] text-gray-800 py-12 sm:py-16 px-4 sm:px-6 md:px-16 lg:px-20"
         >
-            {/* Header Gradient dengan Animasi Scroll */}
+            {/* Banner gambar */}
             <motion.div
-                initial={{ opacity: 0, y: -50 }}
-                animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.8 }}
-                className="w-full bg-gradient-to-r from-[#2ac393] to-[#0e916b] rounded-2xl shadow-lg px-4 sm:px-6 py-4 md:py-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full overflow-hidden mb-6 md:mb-20"
             >
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white drop-shadow-lg text-center">
-                    SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
-                </h1>
+                <img
+                    src="/assets/banner-sre.png"
+                    alt="SRE Banner"
+                    className="w-full object-contain object-center"
+                />
             </motion.div>
 
             {/* About SRE Unila dengan Animasi Scroll */}
@@ -52,13 +55,13 @@ const AboutSection = () => {
                 className="mt-8 sm:mt-10 mb-12 sm:mb-16 md:flex md:items-start md:justify-between"
             >
                 <div className="mb-6 md:mb-0">
-                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-5xl font-extrabold text-center md:text-left">
+                    <h2 className="text-[#0F926C] text-3xl lg:text-5xl font-extrabold text-center md:text-left">
                         ABOUT <br />
-                        <span className="text-3xl sm:text-4xl md:text-5xl font-extrabold">SRE UNILA</span>
+                        <span className="text-3xl lg:text-5xl font-extrabold">SRE UNILA</span>
                     </h2>
                     <div className="w-32 sm:w-48 md:w-64 h-2 bg-gradient-to-r from-[#0F926C] to-[#ffffff] mt-2 rounded-full mx-auto md:mx-0"></div>
                 </div>
-                <div className="md:w-2/3 text-lg sm:text-xl md:text-2xl">
+                <div className="text-center sm:text-left md:w-2/3 text-lg sm:text-xl md:text-2xl">
                     <p className="mb-4">
                         <strong className="text-[#0F926C]">Society of Renewable Energy (SRE)</strong> is a student-led organization that empowers youth to take part in the transition toward clean and renewable energy.
                     </p>
