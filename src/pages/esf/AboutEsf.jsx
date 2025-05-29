@@ -23,7 +23,7 @@ const AboutEsf = () => {
                 tagline="#ReGreentheFuture"
             />
 
-            <section className="py-12 md:py-16 bg-gray-50 text-gray-800">
+            <section id="after-hero-section" className="py-12 md:py-16 bg-gray-50 text-gray-800">
                 <motion.div
                     className="max-w-6xl mx-auto px-4 md:px-6 flex flex-col md:flex-row items-center gap-10 md:gap-12"
                     initial="hidden"

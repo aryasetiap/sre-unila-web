@@ -19,7 +19,7 @@ const ContactUsEsf = () => {
         tagline="#ReGreentheFuture"
       />
 
-      <section className="py-16 bg-gray-50 text-gray-800 px-4 sm:px-8 md:px-12">
+      <section id="after-hero-section" className="py-16 bg-gray-50 text-gray-800 px-4 sm:px-8 md:px-12">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
           <motion.div
             className="md:w-1/2 space-y-6"

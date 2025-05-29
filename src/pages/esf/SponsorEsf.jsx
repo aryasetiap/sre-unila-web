@@ -26,7 +26,7 @@ const SponsorEsf = () => {
         tagline="#ReGreentheFuture"
       />
 
-      <motion.section className="bg-white py-12 px-4 sm:px-8 md:px-12" variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
+      <motion.section id="after-hero-section" className="bg-white py-12 px-4 sm:px-8 md:px-12" variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
         <div className="max-w-4xl mx-auto text-center mb-12">
           <h2 className="text-4xl font-bold text-green-700">SPONSORSHIP</h2>
           <p className="text-gray-700 mt-4 text-lg">

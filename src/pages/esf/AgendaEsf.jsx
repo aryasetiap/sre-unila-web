@@ -43,7 +43,7 @@ const AgendaEsf = () => {
         tagline="#ReGreentheFuture"
       />
 
-      <section className="bg-white py-12 px-4 md:px-12 space-y-12">
+      <section id="after-hero-section" className="bg-white py-12 px-4 md:px-12 space-y-12">
         <ExpandableCardEsf
           dayTitle="DAY 1"
           date="June 17, 2025"

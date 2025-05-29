@@ -20,7 +20,9 @@ const HomeEsf = () => {
                 tagline="#ReGreentheFuture"
             />
 
-            <AboutESF />
+            <section id="after-hero-section" className="bg-white py-12 md:py-16 px-4 md:px-8">
+                <AboutESF />
+            </section>
 
             <div className="bg-white text-center pt-12 pb-24">
                 <h1 className="text-[#1D6935] text-3xl font-bold mb-6">Ready to Make an Impact?</h1>
