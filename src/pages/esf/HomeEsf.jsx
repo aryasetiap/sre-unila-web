@@ -16,7 +16,7 @@ const HomeEsf = () => {
             <Hero
                 title="ENVIRONMENTAL SUSTAINABILITY FORUM"
                 subtitle="17 - 19 June 2025 | Swiss-Belhotel Lampung"
-                image='/assets/esf/home/bg-hero-homeesf.png'
+                image='/assets/esf/home/bg-hero-homeesf.jpg'
                 tagline="#ReGreentheFuture"
             />
 

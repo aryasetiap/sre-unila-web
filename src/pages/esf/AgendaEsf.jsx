@@ -39,7 +39,7 @@ const AgendaEsf = () => {
       <Hero
         title="AGENDA ESF 2025"
         subtitle="Explore what's next in our journey to a greener future."
-        image="/assets/esf/agenda/bg-hero-agendaesf.png"
+        image="/assets/esf/agenda/bg-hero-agendaesf.jpg"
         tagline="#ReGreentheFuture"
       />
 

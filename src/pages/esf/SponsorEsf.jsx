@@ -22,7 +22,7 @@ const SponsorEsf = () => {
       <Hero
         title="OUR SPONSORSHIP"
         subtitle="Together, we can build a greener, more sustainable future."
-        image='/assets/esf/sponsor/bg-hero-sponsoresf.png'
+        image='/assets/esf/sponsor/bg-hero-sponsoresf.jpg'
         tagline="#ReGreentheFuture"
       />
 

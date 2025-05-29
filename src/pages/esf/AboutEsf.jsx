@@ -19,7 +19,7 @@ const AboutEsf = () => {
             <Hero
                 title="WHAT IS ESF 2025?"
                 subtitle="A movement. A mission. A moment for change."
-                image="/assets/esf/about/bg-hero-aboutesf.png"
+                image="/assets/esf/about/bg-hero-aboutesf.jpg"
                 tagline="#ReGreentheFuture"
             />
 
