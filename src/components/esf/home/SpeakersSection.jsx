@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
+import { useNavigate } from "react-router-dom";
 
 const Card = ({ image, name, title, index }) => (
     <motion.div
@@ -19,6 +20,7 @@ const Card = ({ image, name, title, index }) => (
 );
 
 const SpeakersSection = () => {
+    const navigate = useNavigate();
     const speakers = [
         {
             name: 'Lucio Larano',
@@ -109,9 +111,7 @@ const SpeakersSection = () => {
                         className="bg-green-500 text-white py-2 px-8 rounded-4xl"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        onClick={() =>
-                            document.getElementById("agenda")?.scrollIntoView({ behavior: "smooth" })
-                        }
+                        onClick={() => navigate("/esf/agenda#speakers")}
                     >
                         SEE MORE
                     </motion.button>

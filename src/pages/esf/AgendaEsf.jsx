@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Navbar from "../../components/esf/NavbarEsf";
 import Hero from "../../components/esf/HeroSectionEsf";
 import Footer from "../../components/esf/FooterEsf";
@@ -33,6 +35,15 @@ const agendaDay2 = [
 ];
 
 const AgendaEsf = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === "#speakers") {
+      const el = document.getElementById("speakers");
+      if (el) el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location]);
+
   return (
     <>
       <Navbar />
@@ -73,8 +84,9 @@ const AgendaEsf = () => {
           ]}
         />
       </section>
-
-      <SpeakersSection />
+      <section id="speakers">
+        <SpeakersSection />
+      </section>
       <Footer />
     </>
   );
