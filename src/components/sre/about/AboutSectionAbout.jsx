@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 
 const AboutSectionAbout = () => {
     return (
-        <section className="bg-[#F9F6EE] text-gray-800 pt-16 px-6 md:px-20">
-            {/* Header Gradient */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
+        <section className="bg-[#F9F6EE] text-gray-800 pt-12 px-6 md:px-20">
+            {/* <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
                 viewport={{ once: true }}
@@ -21,6 +20,21 @@ const AboutSectionAbout = () => {
                 >
                     SOCIETY OF <span className="block">RENEWABLE ENERGY</span>
                 </motion.h1>
+            </motion.div> */}
+
+            {/* Banner gambar */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                viewport={{ once: true }}
+                className="w-full overflow-hidden mb-6 md:mb-20"
+            >
+                <img
+                    src="/assets/banner-sre.png"
+                    alt="SRE Banner"
+                    className="w-full object-contain object-center"
+                />
             </motion.div>
 
             {/* About SRE Unila */}
