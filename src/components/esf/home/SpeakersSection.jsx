@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const Card = ({ image, name, title, index }) => (
@@ -59,11 +60,31 @@ const SpeakersSection = () => {
                     With Global Speakers
                 </h2>
 
-                {/* Desktop & Tablet grid */}
-                <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {speakers.map((speaker, index) => (
-                        <Card key={index} index={index} {...speaker} />
-                    ))}
+                {/* Desktop & Tablet flex grid */}
+                <div className="hidden md:flex flex-wrap gap-8 justify-center">
+                    {speakers.map((speaker, index) => {
+                        // Untuk baris terakhir, jika hanya ada 2 speaker, center-kan
+                        const itemsPerRow = 3;
+                        const total = speakers.length;
+                        const lastRowCount = total % itemsPerRow === 0 ? itemsPerRow : total % itemsPerRow;
+                        const isLastRow = index >= total - lastRowCount;
+
+                        // Untuk baris terakhir, tambahkan margin auto di kiri jika hanya ada 2 speaker
+                        const lastRowClass =
+                            isLastRow && lastRowCount === 2
+                                ? (index === total - lastRowCount ? "lg:ml-auto" : "lg:mr-auto")
+                                : "";
+
+                        return (
+                            <div
+                                key={index}
+                                className={`flex-1 min-w-[260px] max-w-[340px] ${lastRowClass}`}
+                                style={{ flexBasis: "30%" }}
+                            >
+                                <Card index={index} {...speaker} />
+                            </div>
+                        );
+                    })}
                 </div>
 
                 {/* Mobile slider */}
@@ -72,6 +93,8 @@ const SpeakersSection = () => {
                         spaceBetween={16}
                         slidesPerView={1.2}
                         centeredSlides={true}
+                        modules={[Autoplay]}
+                        autoplay={{ delay: 1500, disableOnInteraction: false }} // 3 detik, ganti 4000 untuk 4 detik
                     >
                         {speakers.map((speaker, index) => (
                             <SwiperSlide key={index}>
