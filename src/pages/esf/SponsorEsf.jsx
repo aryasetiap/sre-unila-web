@@ -58,23 +58,39 @@ const SponsorEsf = () => {
       </section>
 
       <motion.section className="bg-white w-full pb-12 px-4 sm:px-8 md:px-12" variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <div className="bg-green-100 py-12 px-6 md:px-16 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-12">
-          <h2 className="text-green-700 font-extrabold text-4xl mb-4">COLLABORATOR</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {Array.from({ length: 5 }).map((_, index) => (
-              <div key={index} className="bg-gray-300 h-36 w-36 rounded-xl"></div>
-            ))}
+        <div className="bg-green-100 py-12 px-6 md:px-16 rounded-3xl flex flex-col lg:flex-row items-start gap-y-6 gap-x-12">
+          {/* Kiri: Judul */}
+          <div className="w-full lg:w-1/3 mb-2 lg:mb-0 flex-shrink-0 flex items-start">
+            <h2 className="text-green-700 font-extrabold text-2xl sm:text-3xl lg:text-4xl mb-4 lg:mb-0">
+              COLLABORATOR
+            </h2>
+          </div>
+          {/* Kanan: Grid Logo */}
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+              {Array.from({ length: 20 }).map((_, index) => (
+                <div key={index} className="bg-gray-300 h-24 w-full rounded-xl"></div>
+              ))}
+            </div>
           </div>
         </div>
       </motion.section>
 
       <motion.section className="bg-white w-full pb-12 px-4 sm:px-8 md:px-12" variants={fadeIn} initial="hidden" whileInView="show" viewport={{ once: true }}>
-        <div className="bg-green-100 py-12 px-6 md:px-16 rounded-3xl flex flex-col md:flex-row justify-between items-start gap-12">
-          <h2 className="text-green-700 font-extrabold text-4xl mb-4">MEDIA PARTNER</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6">
-            {Array.from({ length: 20 }).map((_, index) => (
-              <div key={index} className="bg-gray-300 h-36 w-36 rounded-xl"></div>
-            ))}
+        <div className="bg-green-100 py-12 px-6 md:px-16 rounded-3xl flex flex-col lg:flex-row items-start gap-y-6 gap-x-12">
+          {/* Kiri: Judul */}
+          <div className="w-full lg:w-1/3 mb-2 lg:mb-0 flex-shrink-0 flex items-start">
+            <h2 className="text-green-700 font-extrabold text-2xl sm:text-3xl lg:text-4xl mb-4 lg:mb-0">
+              MEDIA PARTNER
+            </h2>
+          </div>
+          {/* Kanan: Grid Logo */}
+          <div className="w-full lg:w-2/3">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5 gap-6">
+              {Array.from({ length: 20 }).map((_, index) => (
+                <div key={index} className="bg-gray-300 h-24 w-full rounded-xl"></div>
+              ))}
+            </div>
           </div>
         </div>
       </motion.section>
