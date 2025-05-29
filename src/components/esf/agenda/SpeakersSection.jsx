@@ -71,7 +71,7 @@ const speakers = [
         title: "Environment Engineering Lecturer at University of Lampung.",
     },
     {
-        image: "/assets/esf/agenda/speaker-emmy.png",
+        image: "/assets/esf/agenda/speaker-erna.png",
         name: "Dra. Dr. Erna Rochana, M.Si",
         title: "Water Governance Lecturer at Institute Technology of Sumatera",
     },
