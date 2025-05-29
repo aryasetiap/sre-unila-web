@@ -43,6 +43,8 @@ const HomeEsf = () => {
                 </div>
             </div>
 
+            <AgendaESF />
+
             <LampungSREnovation />
 
             <SpeakersSection />

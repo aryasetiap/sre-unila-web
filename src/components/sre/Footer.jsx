@@ -35,7 +35,7 @@ export default function Footer() {
                         hidden: { opacity: 0 },
                         visible: { opacity: 1, transition: { staggerChildren: 0.2 } },
                     }}
-                    className="grid grid-cols-1 gap-x-10 gap-y-6 text-lg sm:text-xl md:text-2xl"
+                    className="grid grid-cols-1 lg:grid-cols-2 gap-x-10 gap-y-6 text-lg sm:text-xl md:text-2xl"
                 >
                     {[
                         { href: "mailto:sre.unila@gmail.com", icon: Mail, text: "sre.unila@gmail.com" },
