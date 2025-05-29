@@ -11,7 +11,7 @@ const Staff = () => {
       <Navbar />
       {/* Hero Section */}
       <Hero
-        title="OUR STAF"
+        title="OUR ORGANIZATION"
         subtitle="Behind every project is a passionate student ready to make an impact."
         image='/assets/hero-images/bg-hero-staff.jpg'
         tagline="#ReGreentheFuture"
