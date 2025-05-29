@@ -1,6 +1,6 @@
 const SpeakerCard = ({ image, name, title }) => {
     return (
-        <div className="bg-[#EAF4E6] rounded-3xl p-6 text-center shadow-md hover:shadow-lg transition">
+        <div className="h-full flex flex-col bg-[#EAF4E6] rounded-3xl p-6 text-center shadow-md hover:shadow-lg transition">
             <img
                 src={image}
                 alt={name}

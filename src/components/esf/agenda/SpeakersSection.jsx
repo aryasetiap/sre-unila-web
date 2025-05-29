@@ -58,7 +58,7 @@ const speakers = [
     {
         image: "/assets/esf/agenda/speaker-amrizal.jpg",
         name: "Prof. Dr. Amrizal, S.T., M.T",
-        title: "",
+        title: "Researcher and lecturer who focuses on Mechanical Engineering, biomass energy, and solar photovoltaic",
     },
     {
         image: "/assets/esf/agenda/speaker-fuad.jpg",
@@ -111,7 +111,7 @@ const SpeakersSection = () => {
 
             <motion.div
                 layout
-                className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto"
+                className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto"
             >
                 <AnimatePresence>
                     {visibleSpeakers.map((speaker, index) => (
@@ -122,7 +122,7 @@ const SpeakersSection = () => {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -20 }}
                             transition={{ duration: 0.3, ease: "easeInOut" }}
-                            style={{ flex: '1 1 280px', maxWidth: '320px' }} // set flex-basis dan max-width tiap card
+                            className="h-full flex flex-col"
                         >
                             <SpeakerCard {...speaker} />
                         </motion.div>
