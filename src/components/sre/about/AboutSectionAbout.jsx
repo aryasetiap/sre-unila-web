@@ -101,7 +101,7 @@ const AboutSectionAbout = () => {
                     viewport={{ once: true }}
                     className="mb-6"
                 >
-                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-4xl font-extrabold">
                         OUR <br />
                         GOALS
                     </h2>
@@ -149,7 +149,7 @@ const AboutSectionAbout = () => {
                     viewport={{ once: true }}
                     className="mb-6"
                 >
-                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-4xl font-extrabold">
                         OUR <br />
                         VISION
                     </h2>
@@ -194,7 +194,7 @@ const AboutSectionAbout = () => {
                     viewport={{ once: true }}
                     className="mb-6"
                 >
-                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-5xl font-extrabold">
+                    <h2 className="text-[#0F926C] text-3xl sm:text-4xl md:text-4xl font-extrabold">
                         OUR <br />
                         MISSIONS
                     </h2>
