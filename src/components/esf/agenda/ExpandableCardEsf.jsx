@@ -10,7 +10,12 @@ const ExpandableCardEsf = ({ dayTitle, date, summary, location, agendaList }) =>
     return (
         <motion.div
             layout
-            className="w-full max-w-4xl mx-auto my-6 bg-[#EAF4E6] text-[#1D6935] rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
+            className="w-full max-w-4xl mx-auto my-6 rounded-3xl shadow-md hover:shadow-lg cursor-pointer transition-shadow duration-300"
+            style={{
+                background: isExpanded
+                    ? "rgba(76,183,72,0.10)"
+                    : "linear-gradient(90deg, #0B461E 0%, #51C877 100%)"
+            }}
             onClick={() => setIsExpanded(!isExpanded)}
             initial={{ borderRadius: 24 }}
             whileHover={{ boxShadow: "0 10px 20px rgba(76, 183, 72, 0.3)" }}
@@ -21,14 +26,14 @@ const ExpandableCardEsf = ({ dayTitle, date, summary, location, agendaList }) =>
                     layout
                 >
                     <motion.h2
-                        className="text-3xl md:text-4xl font-bold"
+                        className={`text-3xl md:text-4xl font-bold ${isExpanded ? "text-[#1D6935]" : "text-white"}`}
                         layout
                         initial={false}
                     >
                         {dayTitle}
                     </motion.h2>
                     <motion.span
-                        className={`absolute right-4 text-[#1D6935] text-3xl`}
+                        className={`absolute right-4 text-3xl ${isExpanded ? "text-[#1D6935]" : "text-white"}`}
                         animate={{ rotate: isExpanded ? 45 : 0 }}
                         transition={{ duration: 0.3 }}
                         layout
@@ -38,7 +43,7 @@ const ExpandableCardEsf = ({ dayTitle, date, summary, location, agendaList }) =>
                 </motion.div>
 
                 <motion.div
-                    className="mt-2 text-base md:text-lg text-center space-y-1"
+                    className={`mt-2 text-base md:text-lg text-center space-y-1 ${isExpanded ? "text-[#1D6935]" : "text-white"}`}
                     layout
                 >
                     <p className="font-medium">{date}</p>
@@ -49,30 +54,30 @@ const ExpandableCardEsf = ({ dayTitle, date, summary, location, agendaList }) =>
                 <AnimatePresence initial={false}>
                     {isExpanded && (
                         <motion.div
-                            className="mt-6 bg-[#FBFCF7] p-6 md:p-8 rounded-3xl shadow-inner overflow-x-auto"
+                            className="bg-[#FBFCF7] mt-6 p-6 md:p-8 rounded-3xl shadow-inner overflow-x-auto"
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.4, ease: "easeInOut" }}
                             layout
                         >
-                            <table className="w-full border-collapse border border-[#4CB748] text-black text-sm md:text-base">
-                                <thead className="bg-[#4CB748] text-white">
+                            <table className="w-full text-left text-black text-sm md:text-base">
+                                <thead>
                                     <tr>
-                                        <th className="border border-[#4CB748] px-3 py-2 w-[20%]">TIME</th>
-                                        <th className="border border-[#4CB748] px-3 py-2">AGENDA</th>
+                                        <th className="px-3 py-2 w-[20%] text-[#1D6935] font-bold text-xl md:text-2xl bg-transparent border-none">TIME</th>
+                                        <th className="px-3 py-2 text-[#1D6935] font-bold text-xl md:text-2xl bg-transparent border-none">AGENDA</th>
                                         {hasMeetingRoom && (
-                                            <th className="border border-[#4CB748] px-3 py-2 w-[30%]">MEETING ROOM</th>
+                                            <th className="px-3 py-2 w-[30%] text-[#1D6935] font-bold text-xl md:text-2xl bg-transparent border-none">MEETING ROOM</th>
                                         )}
                                     </tr>
                                 </thead>
                                 <tbody>
                                     {agendaList.map(([time, agenda, room = "-"], index) => (
-                                        <tr key={index} className="odd:bg-[#DFF2D8] even:bg-white">
-                                            <td className="border border-[#4CB748] px-3 py-2 align-top">{time}</td>
-                                            <td className="border border-[#4CB748] px-3 py-2">{agenda}</td>
+                                        <tr key={index} className="">
+                                            <td className="px-3 py-2 align-top border-b border-[#4CB748] bg-transparent">{time}</td>
+                                            <td className="px-3 py-2 border-b border-[#4CB748] bg-transparent">{agenda}</td>
                                             {hasMeetingRoom && (
-                                                <td className="border border-[#4CB748] px-3 py-2">{room}</td>
+                                                <td className="px-3 py-2 border-b border-[#4CB748] bg-transparent">{room}</td>
                                             )}
                                         </tr>
                                     ))}
